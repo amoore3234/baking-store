@@ -27,6 +27,6 @@ ENV JAVA_OPTS "-server -Xms512M -Xmx512M -XX:+UseG1GC -XX:+UseStringDeduplicatio
 
 WORKDIR /opt/ordering-system
 
-ENTRYPOINT [ "docker-pointOfEntry" ]
+ENTRYPOINT [ "docker-entry" ]
 
 EXPOSE 8080 8081

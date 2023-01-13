@@ -1,3 +1,9 @@
+database:
+  driverClass: org.postgresql.Driver
+  user: ${DATABASE_USER:-bakingstoreuser}
+  password: ${DATABASE_PASSWORD:-postgres}
+  url: jdbc:postgresql://$DATABASE_HOST:-localhost}:${DATABASE_PORT:-5432}/${DATABASE_NAME:-bakingstore}
+
 logging:
   level: INFO
   loggers:
