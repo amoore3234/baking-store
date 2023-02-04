@@ -1,8 +1,23 @@
 database:
   driverClass: org.postgresql.Driver
-  user: ${DATABASE_USER:-bakingstoreuser}
-  password: ${DATABASE_PASSWORD:-postgres}
-  url: jdbc:postgresql://$DATABASE_HOST:-localhost}:${DATABASE_PORT:-5432}/${DATABASE_NAME:-bakingstore}
+  user: bakingstoreuser
+  password: postgres
+  url: jdbc:postgresql://localhost:5432/bakingstore
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+
+  # the amount of time to sleep between runs of the idle connection validation, abandoned cleaner and idle pool resizing
+  evictionInterval: 10s
+
+  # the minimum amount of time an connection must sit idle in the pool before it is eligible for eviction
+  minIdleTime: 1 minute
 
 logging:
   level: INFO
