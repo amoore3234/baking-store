@@ -1,2 +1,3 @@
-com/store/OrderingSystemApplication.class
-com/store/OrderingSystemConfiguration.class
+com\store\health\AppHealthCheck.class
+com\store\OrderingSystemApplication.class
+com\store\OrderingSystemConfiguration.class

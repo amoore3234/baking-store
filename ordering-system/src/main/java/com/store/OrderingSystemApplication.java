@@ -1,5 +1,7 @@
 package com.store;
 
+import com.store.health.AppHealthCheck;
+
 import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
@@ -22,8 +24,9 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
 
     @Override
     public void run(final OrderingSystemConfiguration configuration,
-                    final Environment environment) {
-        // TODO: implement application
+            final Environment environment) {
+        final AppHealthCheck healthCheck = new AppHealthCheck(configuration.getTemplate());
+        environment.healthChecks().register("template", healthCheck);
     }
 
 }

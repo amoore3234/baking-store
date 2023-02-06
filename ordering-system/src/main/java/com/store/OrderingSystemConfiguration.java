@@ -10,9 +10,22 @@ import jakarta.validation.constraints.*;
 
 public class OrderingSystemConfiguration extends Configuration {
 
+  @NotEmpty
+  private String template;
+
   @Valid
   @NotNull
   private DataSourceFactory database = new DataSourceFactory();
+
+  @JsonProperty
+  public String getTemplate() {
+    return template;
+  }
+
+  @JsonProperty
+  public void setTemplate(String template) {
+    this.template = template;
+  }
 
   @JsonProperty("database")
   public void setDataSourceFactory(DataSourceFactory factory) {
