@@ -1,0 +1,3 @@
+com/store/db/EntityUtil.class
+com/store/db/AbstractDaoRepositoryIntegrationTest.class
+com/store/db/CustomerDaoIntegrationTest.class

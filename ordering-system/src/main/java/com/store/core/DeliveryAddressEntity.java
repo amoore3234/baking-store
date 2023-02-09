@@ -42,7 +42,7 @@ public class DeliveryAddressEntity {
   private String deliveryAddressZipCode;
 
   @Nullable
-  @Column(name = "delivery_address_zipcode")
+  @Column(name = "delivery_address_phone")
   private String deliveryAddressPhoneNumber;
 
   @Nullable

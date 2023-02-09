@@ -6,15 +6,15 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet id="amoore3234" author="author">
+    <changeSet author="amoore" id="create_tables">
       <createTable tableName="customers">
         <column name="customer_id" type="bigint" autoIncrement="true">
           <constraints primaryKey="true" nullable="false" />
         </column>
-        <column name="first_name" type="varchar(20)" />
-        <column name="last_name" type="varchar(20)" />
-        <column name="address_one" type="varchar(40)" />
-        <column name="address_two" type="varchar(40)" />
+        <column name="customer_first_name" type="varchar(20)" />
+        <column name="customer_last_name" type="varchar(20)" />
+        <column name="customer_address_one" type="varchar(40)" />
+        <column name="customer_address_two" type="varchar(40)" />
         <column name="customer_city" type="varchar(20)" />
         <column name="customer_state" type="varchar(2)" />
         <column name="customer_zip_code" type="varchar(6)" />

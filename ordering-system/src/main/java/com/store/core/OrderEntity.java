@@ -1,6 +1,6 @@
 package com.store.core;
 
-import java.sql.Timestamp;
+import java.time.OffsetDateTime;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
@@ -37,7 +37,7 @@ public class OrderEntity {
 
   @Nullable
   @Column(name = "date")
-  private Timestamp date;
+  private OffsetDateTime date;
 
   @Nullable
   @Column(name = "order_total")
@@ -61,11 +61,11 @@ public class OrderEntity {
   }
 
   @Nullable
-  public Timestamp getDate() {
+  public OffsetDateTime getDate() {
     return date;
   }
 
-  public void setDate(@Nullable Timestamp date) {
+  public void setDate(@Nullable OffsetDateTime date) {
     this.date = date;
   }
 

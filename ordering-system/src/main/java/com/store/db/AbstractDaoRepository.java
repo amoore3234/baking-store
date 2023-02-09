@@ -26,7 +26,7 @@ public abstract class AbstractDaoRepository<T> extends AbstractDAO<T> {
   }
 
   public void deleteById(long id) {
-    currentSession().delete(getById(id));
+    getById(id).ifPresent(this::delete);
   }
 
   public void delete(T entity) {

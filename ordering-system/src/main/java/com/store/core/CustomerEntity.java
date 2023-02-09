@@ -22,20 +22,20 @@ public class CustomerEntity {
   private long id;
 
   @Nullable
-  @Column(name = "first_name")
-  private String firstName;
+  @Column(name = "customer_first_name")
+  private String customerFirstName;
 
   @Nullable
-  @Column(name = "last_name")
-  private String lastName;
+  @Column(name = "customer_last_name")
+  private String customerLastName;
 
   @Nullable
-  @Column(name = "address_one")
-  private String addressOne;
+  @Column(name = "customer_address_one")
+  private String customerAddressOne;
 
   @Nullable
-  @Column(name = "address_two")
-  private String addressTwo;
+  @Column(name = "customer_address_two")
+  private String customerAddressTwo;
 
   @Nullable
   @Column(name = "customer_city")
@@ -46,12 +46,12 @@ public class CustomerEntity {
   private String customerState;
 
   @Nullable
-  @Column(name = "zip_code")
-  private String zipCode;
+  @Column(name = "customer_zip_code")
+  private String customerZipCode;
 
   @Nullable
-  @Column(name = "phone_number")
-  private String phoneNumber;
+  @Column(name = "customer_phone_number")
+  private String customerPhoneNumber;
 
   @Nullable
   @Column(name = "customer_email")
@@ -74,39 +74,39 @@ public class CustomerEntity {
   }
 
   @Nullable
-  public String getFirstName() {
-    return firstName;
+  public String getCustomerFirstName() {
+    return customerFirstName;
   }
 
-  public void setFirstName(@Nullable String firstName) {
-    this.firstName = firstName;
-  }
-
-  @Nullable
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(@Nullable String lastName) {
-    this.lastName = lastName;
+  public void setCustomerFirstName(@Nullable String customerFirstName) {
+    this.customerFirstName = customerFirstName;
   }
 
   @Nullable
-  public String getAddressOne() {
-    return addressOne;
+  public String getCustomerLastName() {
+    return customerLastName;
   }
 
-  public void setAddressOne(@Nullable String addressOne) {
-    this.addressOne = addressOne;
+  public void setCustomerLastName(@Nullable String customerLastName) {
+    this.customerLastName = customerLastName;
   }
 
   @Nullable
-  public String getAddressTwo() {
-    return addressTwo;
+  public String getCustomerAddressOne() {
+    return customerAddressOne;
   }
 
-  public void setAddressTwo(@Nullable String addressTwo) {
-    this.addressTwo = addressTwo;
+  public void setCustomerAddressOne(@Nullable String customerAddressOne) {
+    this.customerAddressOne = customerAddressOne;
+  }
+
+  @Nullable
+  public String getCustomerAddressTwo() {
+    return customerAddressTwo;
+  }
+
+  public void setCustomerAddressTwo(@Nullable String customerAddressTwo) {
+    this.customerAddressTwo = customerAddressTwo;
   }
 
   @Nullable
@@ -128,21 +128,21 @@ public class CustomerEntity {
   }
 
   @Nullable
-  public String getZipCode() {
-    return zipCode;
+  public String getCustomerZipCode() {
+    return customerZipCode;
   }
 
-  public void setZipCode(@Nullable String zipCode) {
-    this.zipCode = zipCode;
+  public void setCustomerZipCode(@Nullable String customerZipCode) {
+    this.customerZipCode = customerZipCode;
   }
 
   @Nullable
-  public String getPhoneNumber() {
-    return phoneNumber;
+  public String getCustomerPhoneNumber() {
+    return customerPhoneNumber;
   }
 
-  public void setPhoneNumber(@Nullable String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public void setCustomerPhoneNumber(@Nullable String customerPhoneNumber) {
+    this.customerPhoneNumber = customerPhoneNumber;
   }
 
   @Nullable
@@ -171,18 +171,19 @@ public class CustomerEntity {
     this.customerCarts = customerCarts;
   }
 
+  @Override
   public int hashCode() {
     final int prime = 31;
     int result = 1;
     result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-    result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
-    result = prime * result + ((addressOne == null) ? 0 : addressOne.hashCode());
-    result = prime * result + ((addressTwo == null) ? 0 : addressTwo.hashCode());
+    result = prime * result + ((customerFirstName == null) ? 0 : customerFirstName.hashCode());
+    result = prime * result + ((customerLastName == null) ? 0 : customerLastName.hashCode());
+    result = prime * result + ((customerAddressOne == null) ? 0 : customerAddressOne.hashCode());
+    result = prime * result + ((customerAddressTwo == null) ? 0 : customerAddressTwo.hashCode());
     result = prime * result + ((customerCity == null) ? 0 : customerCity.hashCode());
     result = prime * result + ((customerState == null) ? 0 : customerState.hashCode());
-    result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
-    result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
+    result = prime * result + ((customerZipCode == null) ? 0 : customerZipCode.hashCode());
+    result = prime * result + ((customerPhoneNumber == null) ? 0 : customerPhoneNumber.hashCode());
     result = prime * result + ((customerEmail == null) ? 0 : customerEmail.hashCode());
     result = prime * result + ((customers == null) ? 0 : customers.hashCode());
     result = prime * result + ((customerCarts == null) ? 0 : customerCarts.hashCode());
@@ -200,25 +201,25 @@ public class CustomerEntity {
     CustomerEntity other = (CustomerEntity) obj;
     if (id != other.id)
       return false;
-    if (firstName == null) {
-      if (other.firstName != null)
+    if (customerFirstName == null) {
+      if (other.customerFirstName != null)
         return false;
-    } else if (!firstName.equals(other.firstName))
+    } else if (!customerFirstName.equals(other.customerFirstName))
       return false;
-    if (lastName == null) {
-      if (other.lastName != null)
+    if (customerLastName == null) {
+      if (other.customerLastName != null)
         return false;
-    } else if (!lastName.equals(other.lastName))
+    } else if (!customerLastName.equals(other.customerLastName))
       return false;
-    if (addressOne == null) {
-      if (other.addressOne != null)
+    if (customerAddressOne == null) {
+      if (other.customerAddressOne != null)
         return false;
-    } else if (!addressOne.equals(other.addressOne))
+    } else if (!customerAddressOne.equals(other.customerAddressOne))
       return false;
-    if (addressTwo == null) {
-      if (other.addressTwo != null)
+    if (customerAddressTwo == null) {
+      if (other.customerAddressTwo != null)
         return false;
-    } else if (!addressTwo.equals(other.addressTwo))
+    } else if (!customerAddressTwo.equals(other.customerAddressTwo))
       return false;
     if (customerCity == null) {
       if (other.customerCity != null)
@@ -230,15 +231,15 @@ public class CustomerEntity {
         return false;
     } else if (!customerState.equals(other.customerState))
       return false;
-    if (zipCode == null) {
-      if (other.zipCode != null)
+    if (customerZipCode == null) {
+      if (other.customerZipCode != null)
         return false;
-    } else if (!zipCode.equals(other.zipCode))
+    } else if (!customerZipCode.equals(other.customerZipCode))
       return false;
-    if (phoneNumber == null) {
-      if (other.phoneNumber != null)
+    if (customerPhoneNumber == null) {
+      if (other.customerPhoneNumber != null)
         return false;
-    } else if (!phoneNumber.equals(other.phoneNumber))
+    } else if (!customerPhoneNumber.equals(other.customerPhoneNumber))
       return false;
     if (customerEmail == null) {
       if (other.customerEmail != null)
@@ -258,11 +259,13 @@ public class CustomerEntity {
     return true;
   }
 
+  @Override
   public String toString() {
-    return "CustomerEntity [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", addressOne="
-        + addressOne + ", addressTwo=" + addressTwo + ", customerCity=" + customerCity + ", customerState="
-        + customerState + ", zipCode=" + zipCode + ", phoneNumber=" + phoneNumber + ", customerEmail=" + customerEmail
-        + ", customers=" + customers + ", customerCarts=" + customerCarts + "]";
+    return "CustomerEntity [id=" + id + ", customerFirstName=" + customerFirstName + ", customerLastName="
+        + customerLastName + ", customerAddressOne=" + customerAddressOne + ", customerAddressTwo=" + customerAddressTwo
+        + ", customerCity=" + customerCity + ", customerState=" + customerState + ", customerZipCode=" + customerZipCode
+        + ", customerPhoneNumber=" + customerPhoneNumber + ", customerEmail=" + customerEmail + ", customers="
+        + customers + ", customerCarts=" + customerCarts + "]";
   }
 
 }
