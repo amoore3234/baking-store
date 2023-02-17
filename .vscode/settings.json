@@ -1,3 +1,15 @@
 {
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.completion.importOrder": [
+    "#",
+    ""
+  ],
+  "java.codeGeneration.useBlocks": true,
+  "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+  "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [120],
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
 }
