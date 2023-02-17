@@ -1,7 +1,7 @@
 package com.store.core;
 
 import java.util.List;
-
+import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,6 +22,10 @@ public class DeliveryAddressEntity {
   private long id;
 
   @Nullable
+  @Column(name = "delivery_address_name")
+  private String deliveryAddressName;
+
+  @Nullable
   @Column(name = "delivery_address_one")
   private String deliveryAddressOne;
 
@@ -38,7 +42,7 @@ public class DeliveryAddressEntity {
   private String deliveryAddressState;
 
   @Nullable
-  @Column(name = "delivery_address_zipcode")
+  @Column(name = "delivery_address_zip_code")
   private String deliveryAddressZipCode;
 
   @Nullable
@@ -57,8 +61,17 @@ public class DeliveryAddressEntity {
   }
 
   @Nullable
-  public long id() {
+  public long getId() {
     return id;
+  }
+
+  @Nullable
+  public String getDeliveryAddressName() {
+    return deliveryAddressName;
+  }
+
+  public void setDeliveryAddressName(@Nullable String deliveryAddressName) {
+    this.deliveryAddressName = deliveryAddressName;
   }
 
   @Nullable
@@ -135,81 +148,37 @@ public class DeliveryAddressEntity {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((deliveryAddressOne == null) ? 0 : deliveryAddressOne.hashCode());
-    result = prime * result + ((deliveryAddressTwo == null) ? 0 : deliveryAddressTwo.hashCode());
-    result = prime * result + ((deliveryAddressCity == null) ? 0 : deliveryAddressCity.hashCode());
-    result = prime * result + ((deliveryAddressState == null) ? 0 : deliveryAddressState.hashCode());
-    result = prime * result + ((deliveryAddressZipCode == null) ? 0 : deliveryAddressZipCode.hashCode());
-    result = prime * result + ((deliveryAddressPhoneNumber == null) ? 0 : deliveryAddressPhoneNumber.hashCode());
-    result = prime * result + ((deliveryAddressEmail == null) ? 0 : deliveryAddressEmail.hashCode());
-    result = prime * result + ((orderDetails == null) ? 0 : orderDetails.hashCode());
-    return result;
+    return Objects.hash(id, deliveryAddressName, deliveryAddressOne, deliveryAddressTwo, deliveryAddressCity,
+        deliveryAddressState, deliveryAddressZipCode, deliveryAddressPhoneNumber, deliveryAddressEmail, orderDetails);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof DeliveryAddressEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     DeliveryAddressEntity other = (DeliveryAddressEntity) obj;
-    if (id != other.id)
-      return false;
-    if (deliveryAddressOne == null) {
-      if (other.deliveryAddressOne != null)
-        return false;
-    } else if (!deliveryAddressOne.equals(other.deliveryAddressOne))
-      return false;
-    if (deliveryAddressTwo == null) {
-      if (other.deliveryAddressTwo != null)
-        return false;
-    } else if (!deliveryAddressTwo.equals(other.deliveryAddressTwo))
-      return false;
-    if (deliveryAddressCity == null) {
-      if (other.deliveryAddressCity != null)
-        return false;
-    } else if (!deliveryAddressCity.equals(other.deliveryAddressCity))
-      return false;
-    if (deliveryAddressState == null) {
-      if (other.deliveryAddressState != null)
-        return false;
-    } else if (!deliveryAddressState.equals(other.deliveryAddressState))
-      return false;
-    if (deliveryAddressZipCode == null) {
-      if (other.deliveryAddressZipCode != null)
-        return false;
-    } else if (!deliveryAddressZipCode.equals(other.deliveryAddressZipCode))
-      return false;
-    if (deliveryAddressPhoneNumber == null) {
-      if (other.deliveryAddressPhoneNumber != null)
-        return false;
-    } else if (!deliveryAddressPhoneNumber.equals(other.deliveryAddressPhoneNumber))
-      return false;
-    if (deliveryAddressEmail == null) {
-      if (other.deliveryAddressEmail != null)
-        return false;
-    } else if (!deliveryAddressEmail.equals(other.deliveryAddressEmail))
-      return false;
-    if (orderDetails == null) {
-      if (other.orderDetails != null)
-        return false;
-    } else if (!orderDetails.equals(other.orderDetails))
-      return false;
-    return true;
+    return id == other.id && Objects.equals(deliveryAddressName, other.deliveryAddressName)
+        && Objects.equals(deliveryAddressOne, other.deliveryAddressOne)
+        && Objects.equals(deliveryAddressTwo, other.deliveryAddressTwo)
+        && Objects.equals(deliveryAddressCity, other.deliveryAddressCity)
+        && Objects.equals(deliveryAddressState, other.deliveryAddressState)
+        && Objects.equals(deliveryAddressZipCode, other.deliveryAddressZipCode)
+        && Objects.equals(deliveryAddressPhoneNumber, other.deliveryAddressPhoneNumber)
+        && Objects.equals(deliveryAddressEmail, other.deliveryAddressEmail)
+        && Objects.equals(orderDetails, other.orderDetails);
   }
 
   @Override
   public String toString() {
-    return "DeliveryAddressEntity [id=" + id + ", deliveryAddressOne=" + deliveryAddressOne + ", deliveryAddressTwo="
-        + deliveryAddressTwo + ", deliveryAddressCity=" + deliveryAddressCity + ", deliveryAddressState="
-        + deliveryAddressState + ", deliveryAddressZipCode=" + deliveryAddressZipCode + ", deliveryAddressPhoneNumber="
-        + deliveryAddressPhoneNumber + ", deliveryAddressEmail=" + deliveryAddressEmail + ", orderDetails="
-        + orderDetails + "]";
+    return "DeliveryAddressEntity [id=" + id + ", deliveryAddressName=" + deliveryAddressName + ", deliveryAddressOne="
+        + deliveryAddressOne + ", deliveryAddressTwo=" + deliveryAddressTwo + ", deliveryAddressCity="
+        + deliveryAddressCity + ", deliveryAddressState=" + deliveryAddressState + ", deliveryAddressZipCode="
+        + deliveryAddressZipCode + ", deliveryAddressPhoneNumber=" + deliveryAddressPhoneNumber
+        + ", deliveryAddressEmail=" + deliveryAddressEmail + ", orderDetails=" + orderDetails + "]";
   }
 
 }

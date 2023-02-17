@@ -8,5 +8,6 @@
 
    <changeSet author="amoore" id="load_test_data">
      <loadData file="test_customers.csv" tableName="customers" />
+     <loadData file="test_delivery_address.csv" tableName="delivery_address" />
    </changeSet>
 </databaseChangeLog>

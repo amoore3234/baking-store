@@ -39,10 +39,12 @@ class EntityUtil {
     final DeliveryAddressDaoRepository deliveryAddressDaoRepository = new DeliveryAddressDaoRepository(sessionFactory);
 
     final DeliveryAddressEntity deliveryAddressEntity = new DeliveryAddressEntity();
+    deliveryAddressEntity.setDeliveryAddressName("test name");
     deliveryAddressEntity.setDeliveryAddressOne("test address one");
     deliveryAddressEntity.setDeliveryAddressTwo("test address two");
     deliveryAddressEntity.setDeliveryAddressCity("test city");
     deliveryAddressEntity.setDeliveryAddressState("CA");
+    deliveryAddressEntity.setDeliveryAddressZipCode("00000");
     deliveryAddressEntity.setDeliveryAddressPhoneNumber("000-000-0000");
     deliveryAddressEntity.setDeliveryAddressEmail("test email");
     deliveryAddressDaoRepository.save(deliveryAddressEntity);
