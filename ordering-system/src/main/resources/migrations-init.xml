@@ -15,7 +15,7 @@
         <column name="customer_last_name" type="varchar(20)" />
         <column name="customer_address_one" type="varchar(40)" />
         <column name="customer_address_two" type="varchar(40)" />
-        <column name="customer_city" type="varchar(20)" />
+        <column name="customer_city" type="varchar(40)" />
         <column name="customer_state" type="varchar(2)" />
         <column name="customer_zip_code" type="varchar(6)" />
         <column name="customer_phone_number" type="varchar(15)" />

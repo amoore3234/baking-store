@@ -15,7 +15,7 @@
         <column name="customer_last_name" type="varchar(20)" />
         <column name="customer_address_one" type="varchar(40)" />
         <column name="customer_address_two" type="varchar(40)" />
-        <column name="customer_city" type="varchar(20)" />
+        <column name="customer_city" type="varchar(40)" />
         <column name="customer_state" type="varchar(2)" />
         <column name="customer_zip_code" type="varchar(6)" />
         <column name="customer_phone_number" type="varchar(15)" />
@@ -29,11 +29,11 @@
         <column name="delivery_address_name" type="varchar(40)" />
         <column name="delivery_address_one" type="varchar(40)" />
         <column name="delivery_address_two" type="varchar(40)" />
-        <column name="delivery_address_city" type="varchar(20)" />
+        <column name="delivery_address_city" type="varchar(40)" />
         <column name="delivery_address_state" type="varchar(2)" />
         <column name="delivery_address_zip_code" type="varchar(6)" />
         <column name="delivery_address_phone" type="varchar(15)" />
-        <column name="delivery_address_email" type="varchar(20)" />
+        <column name="delivery_address_email" type="varchar(40)" />
       </createTable>
 
       <createTable tableName="order_details">
