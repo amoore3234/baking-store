@@ -1,7 +1,7 @@
 package com.store.core;
 
 import java.time.OffsetDateTime;
-
+import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,12 +36,12 @@ public class OrderEntity {
   private ProductEntity product;
 
   @Nullable
-  @Column(name = "date")
-  private OffsetDateTime date;
+  @Column(name = "order_date")
+  private OffsetDateTime orderDate;
 
   @Nullable
   @Column(name = "order_total")
-  private int orderTotal;
+  private double orderTotal;
 
   public OrderEntity() {
   }
@@ -49,6 +49,15 @@ public class OrderEntity {
   @Nullable
   public long getId() {
     return id;
+  }
+
+  @Nullable
+  public OrderDetailEntity getOrderDetail() {
+    return orderDetail;
+  }
+
+  public void setOrderDetail(@Nullable OrderDetailEntity orderDetail) {
+    this.orderDetail = orderDetail;
   }
 
   @Nullable
@@ -61,69 +70,44 @@ public class OrderEntity {
   }
 
   @Nullable
-  public OffsetDateTime getDate() {
-    return date;
+  public OffsetDateTime getOrderDate() {
+    return orderDate;
   }
 
-  public void setDate(@Nullable OffsetDateTime date) {
-    this.date = date;
+  public void setOrderDate(@Nullable OffsetDateTime orderDate) {
+    this.orderDate = orderDate;
   }
 
   @Nullable
-  public int getOrderTotal() {
+  public double getOrderTotal() {
     return orderTotal;
   }
 
-  public void setOrderTotal(@Nullable int orderTotal) {
+  public void setOrderTotal(@Nullable double orderTotal) {
     this.orderTotal = orderTotal;
   }
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((orderDetail == null) ? 0 : orderDetail.hashCode());
-    result = prime * result + ((product == null) ? 0 : product.hashCode());
-    result = prime * result + ((date == null) ? 0 : date.hashCode());
-    result = prime * result + orderTotal;
-    return result;
+    return Objects.hash(id, orderDetail, product, orderDate, orderTotal);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof OrderEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     OrderEntity other = (OrderEntity) obj;
-    if (id != other.id)
-      return false;
-    if (orderDetail == null) {
-      if (other.orderDetail != null)
-        return false;
-    } else if (!orderDetail.equals(other.orderDetail))
-      return false;
-    if (product == null) {
-      if (other.product != null)
-        return false;
-    } else if (!product.equals(other.product))
-      return false;
-    if (date == null) {
-      if (other.date != null)
-        return false;
-    } else if (!date.equals(other.date))
-      return false;
-    if (orderTotal != other.orderTotal)
-      return false;
-    return true;
+    return id == other.id && Objects.equals(orderDetail, other.orderDetail) && Objects.equals(product, other.product)
+        && Objects.equals(orderDate, other.orderDate) && orderTotal == other.orderTotal;
   }
 
   @Override
   public String toString() {
-    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product=" + product + ", date=" + date
+    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product=" + product + ", date=" + orderDate
         + ", orderTotal=" + orderTotal + "]";
   }
 

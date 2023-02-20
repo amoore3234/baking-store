@@ -12,7 +12,7 @@ import com.store.core.CustomerEntity;
 
 public class CustomerDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
-  CustomerDaoRepository customerDaoRepository;
+  private CustomerDaoRepository customerDaoRepository;
 
   @BeforeEach
   void setup() {

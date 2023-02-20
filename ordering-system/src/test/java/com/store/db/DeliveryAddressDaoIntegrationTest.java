@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class DeliveryAddressDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
-  DeliveryAddressDaoRepository deliveryAddressDaoRepository;
+  private DeliveryAddressDaoRepository deliveryAddressDaoRepository;
 
   @BeforeEach
   void setup() {

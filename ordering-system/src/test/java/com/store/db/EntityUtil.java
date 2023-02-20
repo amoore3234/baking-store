@@ -81,9 +81,10 @@ class EntityUtil {
     final OrderDaoRepository orderDaoRepository = new OrderDaoRepository(sessionFactory);
 
     final OrderEntity orderEntity = new OrderEntity();
-    orderEntity.setDate(now);
+    orderEntity.setOrderDetail(orderDetailTestEntity(sessionFactory));
+    orderEntity.setOrderDate(now);
     orderEntity.setProduct(productTestEntity(sessionFactory));
-    orderEntity.setOrderTotal(0);
+    orderEntity.setOrderTotal(0.00);
     orderDaoRepository.save(orderEntity);
     return orderEntity;
   }

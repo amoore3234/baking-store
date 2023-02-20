@@ -8,9 +8,9 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class OrderDetailsDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
+public class OrderDetailDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
-  OrderDetailDaoRepository orderDetailDaoRepository;
+  private OrderDetailDaoRepository orderDetailDaoRepository;
 
   @BeforeEach
   void setup() {
