@@ -66,13 +66,13 @@
         <column name="order_total" type="double" />
       </createTable>
 
-      <createTable tableName="product">
+      <createTable tableName="products">
         <column name="product_id" type="bigint" autoIncrement="true">
           <constraints primaryKey="true" nullable="false" />
         </column>
         <column name="product_name" type="varchar(20)" />
         <column name="product_price" type="double" />
-        <column name="product_description" type="varchar(40)" />
+        <column name="product_description" type="varchar(70)" />
         <column name="product_quantity" type="int" />
       </createTable>
 

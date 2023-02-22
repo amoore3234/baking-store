@@ -30,11 +30,11 @@ public class ProductEntity {
   private double productPrice;
 
   @Nullable
-  @Column(name = "payment_description")
+  @Column(name = "product_description")
   private String productDescription;
 
   @Nullable
-  @Column(name = "payment_quantity")
+  @Column(name = "product_quantity")
   private int productQuantity;
 
   @Nullable

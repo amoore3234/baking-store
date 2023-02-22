@@ -56,7 +56,7 @@ class EntityUtil {
 
     final ProductEntity productEntity = new ProductEntity();
     productEntity.setProductName("test product name");
-    productEntity.setProductPrice(2.0);
+    productEntity.setProductPrice(2.00);
     productEntity.setProductDescription("Test description");
     productEntity.setProductQuantity(1);
     productDaoRepository.save(productEntity);
