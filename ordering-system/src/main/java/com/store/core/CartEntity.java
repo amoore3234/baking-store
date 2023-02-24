@@ -28,7 +28,7 @@ public class CartEntity {
   private ProductEntity product;
 
   @Nullable
-  @Column(name = "car_quantity")
+  @Column(name = "cart_quantity")
   private int cartQuantity;
 
   public CartEntity() {

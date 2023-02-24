@@ -86,7 +86,7 @@
         <column name="cart_quantity" type="int" />
       </createTable>
 
-      <createTable tableName="customer_cart">
+      <createTable tableName="customer_carts">
         <column name="customer_cart_id" type="bigint" autoIncrement="true">
           <constraints primaryKey="true" nullable="false" />
         </column>

@@ -13,5 +13,6 @@
      <loadData file="test_orders.csv" tableName="orders" />
      <loadData file="test_products.csv" tableName="products" />
      <loadData file="test_carts.csv" tableName="carts" />
+     <loadData file="test_customer_carts.csv" tableName="customer_carts" />
    </changeSet>
 </databaseChangeLog>
