@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "cart")
+@Table(name = "carts")
 public class CartEntity {
 
   @Id

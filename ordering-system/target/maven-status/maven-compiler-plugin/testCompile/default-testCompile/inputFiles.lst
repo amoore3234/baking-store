@@ -1,3 +1,7 @@
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\DeliveryAddressDaoIntegrationTest.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDaoIntegrationTest.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\CustomerDaoIntegrationTest.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\AbstractDaoRepositoryIntegrationTest.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\EntityUtil.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDetailDaoIntegrationTest.java
+C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDaoIntegrationTest.java

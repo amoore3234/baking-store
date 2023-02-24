@@ -1,3 +1,7 @@
-com/store/db/EntityUtil.class
-com/store/db/AbstractDaoRepositoryIntegrationTest.class
-com/store/db/CustomerDaoIntegrationTest.class
+com\store\db\AbstractDaoRepositoryIntegrationTest.class
+com\store\db\OrderDetailDaoIntegrationTest.class
+com\store\db\ProductDaoIntegrationTest.class
+com\store\db\CustomerDaoIntegrationTest.class
+com\store\db\EntityUtil.class
+com\store\db\OrderDaoIntegrationTest.class
+com\store\db\DeliveryAddressDaoIntegrationTest.class
