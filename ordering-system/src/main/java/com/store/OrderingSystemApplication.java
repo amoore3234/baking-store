@@ -5,6 +5,8 @@ import com.store.health.AppHealthCheck;
 import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
+import io.dropwizard.db.DataSourceFactory;
+import io.dropwizard.migrations.MigrationsBundle;
 
 public class OrderingSystemApplication extends Application<OrderingSystemConfiguration> {
 
@@ -19,7 +21,12 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
 
     @Override
     public void initialize(final Bootstrap<OrderingSystemConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(new MigrationsBundle<OrderingSystemConfiguration>() {
+            @Override
+            public DataSourceFactory getDataSourceFactory(OrderingSystemConfiguration configuration) {
+                return configuration.getDataSourceFactory();
+            }
+        });
     }
 
     @Override

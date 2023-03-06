@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+  liquibase:
+    depends_on:
+      - database
+    image: liquibase/liquibase
+    volumes:
+      - ./liquibase-docker/:/liquibase/lib/
+    command:
+      - liquibase
+      - --url=jdbc:postgresql://database/bakingstore
+      - --username=bakingstoreuser
+      - --password=postgres
+      - --changeLogFile=./changelog.xml
+      - update
+
+  database:
+    image: postgres:14
+    container_name: database
+    env_file: env/postgres.env
+    ports:
+      - '5432:5432'
+    volumes:
+      - baking-store-postgres-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  baking-store-postgres-data:
+    driver: local

@@ -1,13 +1,24 @@
 database:
   driverClass: org.postgresql.Driver
-  user: bakingstore
+  user: bakingstoreuser
   password: postgres
-  url: jdbc:postgresql://localhost:5433/bakingstore
+  url: jdbc:postgresql://localhost:5432/bakingstore
 
   # any properties specific to your JDBC driver:
   properties:
     charSet: UTF-8
     hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
 
   # the minimum number of connections to keep open
   minSize: 8
