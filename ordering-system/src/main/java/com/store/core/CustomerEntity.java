@@ -1,7 +1,8 @@
 package com.store.core;
 
+import java.io.Serializable;
 import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,55 +14,67 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "customers")
-public class CustomerEntity {
+public class CustomerEntity implements Serializable {
 
   @Id
   @Nullable
+  @JsonProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "customer_id", nullable = false, unique = true)
   private long id;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_first_name")
   private String customerFirstName;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_last_name")
   private String customerLastName;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_address_one")
   private String customerAddressOne;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_address_two")
   private String customerAddressTwo;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_city")
   private String customerCity;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_state")
   private String customerState;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_zip_code")
   private String customerZipCode;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_phone_number")
   private String customerPhoneNumber;
 
   @Nullable
+  @JsonProperty
   @Column(name = "customer_email")
   private String customerEmail;
 
   @Nullable
+  @JsonProperty
   @OneToMany(mappedBy = "customer")
   private List<OrderDetailEntity> customers;
 
   @Nullable
+  @JsonProperty
   @OneToMany(mappedBy = "customer")
   private List<CustomerCartEntity> customerCarts;
 
@@ -71,6 +84,10 @@ public class CustomerEntity {
   @Nullable
   public long getId() {
     return id;
+  }
+
+  public void setId(@Nullable long id) {
+    this.id = id;
   }
 
   @Nullable

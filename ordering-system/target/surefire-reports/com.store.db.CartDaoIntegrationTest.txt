@@ -1,4 +1,139 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
 -------------------------------------------------------------------------------
 Test set: com.store.db.CartDaoIntegrationTest
 -------------------------------------------------------------------------------
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.762 s - in com.store.db.CartDaoIntegrationTest
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 8aa49ec (Implement customer entity resource)
+=======
+<<<<<<< HEAD
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+>>>>>>> 3f28287 (Implement customer entity resource)
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 112.281 s - in com.store.db.CartDaoIntegrationTest
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ee9bb08 (Modified env file)
+=======
+=======
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+>>>>>>> ee9bb08 (Modified env file)
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+=======
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+>>>>>>> ee9bb08 (Modified env file)
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.561 s - in com.store.db.CartDaoIntegrationTest
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 49bd613 (Modified env file)
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+<<<<<<< HEAD
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+=======
+>>>>>>> ee9bb08 (Modified env file)
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 49bd613 (Modified env file)
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+>>>>>>> 49bd613 (Modified env file)
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+=======
+<<<<<<< HEAD
+>>>>>>> ee9bb08 (Modified env file)
+<<<<<<< HEAD
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 49bd613 (Modified env file)
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+>>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
+=======
+>>>>>>> 49bd613 (Modified env file)
+>>>>>>> 41effe2 (Configure docker compose file to include liquibase)
+=======
+>>>>>>> ee9bb08 (Modified env file)
+>>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
+=======
+=======
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.743 s - in com.store.db.CartDaoIntegrationTest
+>>>>>>> 677fc77 (Implement customer entity resource)
+<<<<<<< HEAD
+>>>>>>> 7b8ff0e (Add migration file)
+<<<<<<< HEAD
+>>>>>>> 67b8293 (Add migration file)
+=======
+=======
+=======
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.653 s - in com.store.db.CartDaoIntegrationTest
+>>>>>>> 3101249 (Add migration file)
+>>>>>>> 41286ec (Implement customer entity resource)
+<<<<<<< HEAD
+>>>>>>> 8aa49ec (Implement customer entity resource)
+=======
+=======
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.899 s - in com.store.db.CartDaoIntegrationTest
+>>>>>>> a7d4a20 (Add correct extension support)
+>>>>>>> 3f28287 (Implement customer entity resource)
+>>>>>>> e30f984 (Implement customer entity resource)
+=======
+>>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)

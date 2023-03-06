@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
 com/store/core/OrderDetailEntity.class
 com/store/core/CartEntity.class
 com/store/db/ProductDaoRepository.class
@@ -17,3 +21,29 @@ com/store/health/AppHealthCheck.class
 com/store/db/CartDaoRepository.class
 com/store/db/CustomerCartDaoRepository.class
 com/store/core/CustomerEntity.class
+<<<<<<< HEAD
+=======
+com\store\core\CustomerEntity.class
+com\store\core\OrderEntity.class
+com\store\db\CustomerCartDaoRepository.class
+com\store\db\DeliveryAddressDaoRepository.class
+com\store\db\CartDaoRepository.class
+com\store\core\CustomerCartEntity.class
+com\store\resource\CustomerEntityResource.class
+com\store\OrderingSystemApplication$2.class
+com\store\db\AbstractDaoRepository.class
+com\store\db\OrderDaoRepository.class
+com\store\db\OrderDetailDaoRepository.class
+com\store\OrderingSystemApplication$1.class
+com\store\db\CustomerDaoRepository.class
+com\store\OrderingSystemConfiguration.class
+com\store\db\ProductDaoRepository.class
+com\store\health\AppHealthCheck.class
+com\store\core\OrderDetailEntity.class
+com\store\core\DeliveryAddressEntity.class
+com\store\core\CartEntity.class
+com\store\OrderingSystemApplication.class
+com\store\core\ProductEntity.class
+>>>>>>> e30f984 (Implement customer entity resource)
+=======
+>>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)

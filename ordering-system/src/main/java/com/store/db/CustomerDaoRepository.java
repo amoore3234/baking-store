@@ -6,7 +6,7 @@ import com.store.core.CustomerEntity;
 
 public class CustomerDaoRepository extends AbstractDaoRepository<CustomerEntity> {
 
-  protected CustomerDaoRepository(SessionFactory sessionFactory) {
+  public CustomerDaoRepository(SessionFactory sessionFactory) {
     super(sessionFactory);
   }
 
