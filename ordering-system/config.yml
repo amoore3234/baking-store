@@ -1,8 +1,13 @@
 database:
   driverClass: org.postgresql.Driver
-  user: bakingstoreuser
+  user: bakingstore
   password: postgres
-  url: jdbc:postgresql://localhost:5432/bakingstore
+  url: jdbc:postgresql://localhost:5433/bakingstore
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
   # the minimum number of connections to keep open
   minSize: 8
