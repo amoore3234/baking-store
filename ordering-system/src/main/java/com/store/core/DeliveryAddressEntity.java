@@ -65,6 +65,10 @@ public class DeliveryAddressEntity {
     return id;
   }
 
+  public void setId(@Nullable long id) {
+    this.id = id;
+  }
+
   @Nullable
   public String getDeliveryAddressName() {
     return deliveryAddressName;

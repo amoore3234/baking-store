@@ -1,12 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 -------------------------------------------------------------------------------
 Test set: com.store.db.CartDaoIntegrationTest
 -------------------------------------------------------------------------------
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.762 s - in com.store.db.CartDaoIntegrationTest
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,5 +147,11 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.899 s - in c
 >>>>>>> a7d4a20 (Add correct extension support)
 >>>>>>> 3f28287 (Implement customer entity resource)
 >>>>>>> e30f984 (Implement customer entity resource)
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)

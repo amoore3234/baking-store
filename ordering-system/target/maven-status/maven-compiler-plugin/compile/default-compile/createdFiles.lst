@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 com/store/core/OrderDetailEntity.class
 com/store/core/CartEntity.class
 com/store/db/ProductDaoRepository.class
@@ -22,6 +28,12 @@ com/store/db/CartDaoRepository.class
 com/store/db/CustomerCartDaoRepository.class
 com/store/core/CustomerEntity.class
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 =======
 com\store\core\CustomerEntity.class
 com\store\core\OrderEntity.class
@@ -45,5 +57,11 @@ com\store\core\CartEntity.class
 com\store\OrderingSystemApplication.class
 com\store\core\ProductEntity.class
 >>>>>>> e30f984 (Implement customer entity resource)
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)

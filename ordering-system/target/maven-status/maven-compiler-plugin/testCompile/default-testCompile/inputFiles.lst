@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,8 +58,14 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDa
 >>>>>>> ee9bb08 (Modified env file)
 >>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
 >>>>>>> e30f984 (Implement customer entity resource)
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/DeliveryAddressDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
@@ -65,6 +77,12 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDa
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,5 +122,11 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\resource\Abs
 >>>>>>> a7d4a20 (Add correct extension support)
 >>>>>>> 3f28287 (Implement customer entity resource)
 >>>>>>> e30f984 (Implement customer entity resource)
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
+=======
+>>>>>>> 2209d14 (Implement customer entity resource class)
+=======
+>>>>>>> 82b4458 (Implement customer entity resource)
