@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,14 +69,23 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDa
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/DeliveryAddressDaoIntegrationTest.java
+>>>>>>> ab94d9b (Implement delivery address resource class)
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/CustomerEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ProductEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/DeliveryAddressDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderDetailEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDetailDaoIntegrationTest.java
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ProductDaoIntegrationTest.java
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/AbstractResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
+<<<<<<< HEAD
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/DeliveryAddressResourceTest.java
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,3 +141,4 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\resource\Abs
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)

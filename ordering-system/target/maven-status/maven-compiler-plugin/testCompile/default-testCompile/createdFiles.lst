@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,14 +73,23 @@ com\store\db\CustomerCartDaoIntegrationTest.class
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
 com/store/db/ProductDaoIntegrationTest.class
+>>>>>>> ab94d9b (Implement delivery address resource class)
 com/store/db/CustomerCartDaoIntegrationTest.class
 com/store/db/CustomerDaoIntegrationTest.class
-com/store/db/DeliveryAddressDaoIntegrationTest.class
 com/store/db/OrderDetailDaoIntegrationTest.class
 com/store/db/EntityUtil.class
+com/store/resource/OrderDetailEntityResourceTest.class
+com/store/resource/ProductEntityResourceTest.class
+com/store/resource/AbstractResourceTest.class
 com/store/db/CartDaoIntegrationTest.class
-com/store/db/AbstractDaoRepositoryIntegrationTest.class
 com/store/db/OrderDaoIntegrationTest.class
+<<<<<<< HEAD
+com/store/db/ProductDaoIntegrationTest.class
+com/store/db/DeliveryAddressDaoIntegrationTest.class
+com/store/resource/DeliveryAddressResourceTest.class
+com/store/resource/CustomerEntityResourceTest.class
+com/store/db/AbstractDaoRepositoryIntegrationTest.class
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,3 +155,4 @@ com\store\resource\CustomerEntityResourceTest.class
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)

@@ -1,7 +1,7 @@
 package com.store.core;
 
 import java.util.List;
-
+import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,6 +24,10 @@ public class ProductEntity {
   @Nullable
   @Column(name = "product_name")
   private String productName;
+
+  @Nullable
+  @Column(name ="product_type")
+  private String productType;
 
   @Nullable
   @Column(name = "product_price")
@@ -49,6 +53,10 @@ public class ProductEntity {
     return id;
   }
 
+  public void setId(@Nullable long id) {
+    this.id = id;
+  }
+
   @Nullable
   public String getProductName() {
     return productName;
@@ -56,6 +64,15 @@ public class ProductEntity {
 
   public void setProductName(@Nullable String productName) {
     this.productName = productName;
+  }
+
+  @Nullable
+  public String getProductType() {
+    return productType;
+  }
+
+  public void setProductType(@Nullable String productType) {
+    this.productType = productType;
   }
 
   @Nullable
@@ -87,57 +104,30 @@ public class ProductEntity {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((productName == null) ? 0 : productName.hashCode());
-    long temp;
-    temp = Double.doubleToLongBits(productPrice);
-    result = prime * result + (int) (temp ^ (temp >>> 32));
-    result = prime * result + ((productDescription == null) ? 0 : productDescription.hashCode());
-    result = prime * result + productQuantity;
-    result = prime * result + ((orders == null) ? 0 : orders.hashCode());
-    return result;
+    return Objects.hash(id, productName, productType, productPrice, productDescription, productQuantity, orders);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof ProductEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     ProductEntity other = (ProductEntity) obj;
-    if (id != other.id)
-      return false;
-    if (productName == null) {
-      if (other.productName != null)
-        return false;
-    } else if (!productName.equals(other.productName))
-      return false;
-    if (Double.doubleToLongBits(productPrice) != Double.doubleToLongBits(other.productPrice))
-      return false;
-    if (productDescription == null) {
-      if (other.productDescription != null)
-        return false;
-    } else if (!productDescription.equals(other.productDescription))
-      return false;
-    if (productQuantity != other.productQuantity)
-      return false;
-    if (orders == null) {
-      if (other.orders != null)
-        return false;
-    } else if (!orders.equals(other.orders))
-      return false;
-    return true;
+    return id == other.id && Objects.equals(productName, other.productName)
+        && Objects.equals(productType, other.productType)
+        && Double.doubleToLongBits(productPrice) == Double.doubleToLongBits(other.productPrice)
+        && Objects.equals(productDescription, other.productDescription) && productQuantity == other.productQuantity
+        && Objects.equals(orders, other.orders);
   }
 
   @Override
   public String toString() {
-    return "ProductEntity [id=" + id + ", productName=" + productName + ", productPrice=" + productPrice
-        + ", productDescription=" + productDescription + ", productQuantity=" + productQuantity + ", orders=" + orders
-        + "]";
+    return "ProductEntity [id=" + id + ", productName=" + productName + ", productType=" + productType
+        + ", productPrice=" + productPrice + ", productDescription=" + productDescription + ", productQuantity="
+        + productQuantity + ", orders=" + orders + "]";
   }
 
 }

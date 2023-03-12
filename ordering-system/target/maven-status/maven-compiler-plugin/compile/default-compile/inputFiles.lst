@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,24 +10,31 @@
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/OrderingSystemConfiguration.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/CustomerEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/ProductEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CartDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CartEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerCartDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/OrderDetailDaoRepository.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderDetailEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/DeliveryAddressEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/DeliveryAddressDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerCartEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/OrderingSystemApplication.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/ProductEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/AbstractDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/OrderDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/health/AppHealthCheck.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderDetailEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/ProductDaoRepository.java
+<<<<<<< HEAD
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/DeliveryAddressEntityResource.java
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,3 +71,4 @@ C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\OrderEn
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)

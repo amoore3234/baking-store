@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.db.ProductDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.43 s - in com.store.db.ProductDaoIntegrationTest
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,3 +134,4 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 132.385 s - in c
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)

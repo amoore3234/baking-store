@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.304 s - in com.store.db.CartDaoIntegrationTest
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,3 +161,4 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.899 s - in c
 >>>>>>> 2209d14 (Implement customer entity resource class)
 =======
 >>>>>>> 82b4458 (Implement customer entity resource)
+>>>>>>> ab94d9b (Implement delivery address resource class)

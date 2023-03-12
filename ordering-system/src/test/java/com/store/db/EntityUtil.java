@@ -56,6 +56,7 @@ class EntityUtil {
 
     final ProductEntity productEntity = new ProductEntity();
     productEntity.setProductName("test product name");
+    productEntity.setProductType("test product type");
     productEntity.setProductPrice(2.00);
     productEntity.setProductDescription("Test description");
     productEntity.setProductQuantity(1);

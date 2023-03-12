@@ -76,6 +76,7 @@
           <constraints primaryKey="true" nullable="false" />
         </column>
         <column name="product_name" type="varchar(20)" />
+        <column name="product_type" type="varchar(20)" />
         <column name="product_price" type="double" />
         <column name="product_description" type="varchar(70)" />
         <column name="product_quantity" type="int" />
