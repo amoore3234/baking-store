@@ -51,6 +51,10 @@ public class OrderEntity {
     return id;
   }
 
+  public void setId(@Nullable long id) {
+    this.id = id;
+  }
+
   @Nullable
   public OrderDetailEntity getOrderDetail() {
     return orderDetail;
@@ -102,13 +106,14 @@ public class OrderEntity {
     }
     OrderEntity other = (OrderEntity) obj;
     return id == other.id && Objects.equals(orderDetail, other.orderDetail) && Objects.equals(product, other.product)
-        && Objects.equals(orderDate, other.orderDate) && orderTotal == other.orderTotal;
+        && Objects.equals(orderDate, other.orderDate)
+        && Double.doubleToLongBits(orderTotal) == Double.doubleToLongBits(other.orderTotal);
   }
 
   @Override
   public String toString() {
-    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product=" + product + ", date=" + orderDate
-        + ", orderTotal=" + orderTotal + "]";
+    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product=" + product + ", orderDate="
+        + orderDate + ", orderTotal=" + orderTotal + "]";
   }
 
 }
