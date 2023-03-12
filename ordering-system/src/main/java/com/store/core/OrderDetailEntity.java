@@ -1,7 +1,7 @@
 package com.store.core;
 
 import java.util.List;
-
+import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -56,6 +56,10 @@ public class OrderDetailEntity {
     return id;
   }
 
+  public void setId(@Nullable long id) {
+    this.id = id;
+  }
+
   @Nullable
   public CustomerEntity getCustomer() {
     return customer;
@@ -102,51 +106,21 @@ public class OrderDetailEntity {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((customer == null) ? 0 : customer.hashCode());
-    result = prime * result + ((deliveryAddress == null) ? 0 : deliveryAddress.hashCode());
-    result = prime * result + ((paymentType == null) ? 0 : paymentType.hashCode());
-    result = prime * result + orderDetailTotal;
-    result = prime * result + ((orders == null) ? 0 : orders.hashCode());
-    return result;
+    return Objects.hash(id, customer, deliveryAddress, paymentType, orderDetailTotal, orders);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof OrderDetailEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     OrderDetailEntity other = (OrderDetailEntity) obj;
-    if (id != other.id)
-      return false;
-    if (customer == null) {
-      if (other.customer != null)
-        return false;
-    } else if (!customer.equals(other.customer))
-      return false;
-    if (deliveryAddress == null) {
-      if (other.deliveryAddress != null)
-        return false;
-    } else if (!deliveryAddress.equals(other.deliveryAddress))
-      return false;
-    if (paymentType == null) {
-      if (other.paymentType != null)
-        return false;
-    } else if (!paymentType.equals(other.paymentType))
-      return false;
-    if (orderDetailTotal != other.orderDetailTotal)
-      return false;
-    if (orders == null) {
-      if (other.orders != null)
-        return false;
-    } else if (!orders.equals(other.orders))
-      return false;
-    return true;
+    return id == other.id && Objects.equals(customer, other.customer)
+        && Objects.equals(deliveryAddress, other.deliveryAddress) && Objects.equals(paymentType, other.paymentType)
+        && orderDetailTotal == other.orderDetailTotal && Objects.equals(orders, other.orders);
   }
 
   @Override
