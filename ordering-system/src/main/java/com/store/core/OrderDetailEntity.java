@@ -1,7 +1,5 @@
 package com.store.core;
 
-import java.util.List;
-import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,6 +11,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "order_details")
@@ -33,8 +34,8 @@ public class OrderDetailEntity {
   @Nullable
   @NotNull
   @ManyToOne
-  @JoinColumn(name = "delivery_address_id", referencedColumnName = "delivery_address_id")
-  private DeliveryAddressEntity deliveryAddress;
+  @JoinColumn(name = "shipping_address_id", referencedColumnName = "shipping_address_id")
+  private ShippingAddressEntity shippingAddress;
 
   @Nullable
   @Column(name = "payment_type")
@@ -70,12 +71,12 @@ public class OrderDetailEntity {
   }
 
   @Nullable
-  public DeliveryAddressEntity getDeliveryAddress() {
-    return deliveryAddress;
+  public ShippingAddressEntity getShippingAddress() {
+    return shippingAddress;
   }
 
-  public void setDeliveryAddress(@Nullable DeliveryAddressEntity deliveryAddress) {
-    this.deliveryAddress = deliveryAddress;
+  public void setShippingAddress(@Nullable ShippingAddressEntity shippingAddress) {
+    this.shippingAddress = shippingAddress;
   }
 
   @Nullable
@@ -106,7 +107,7 @@ public class OrderDetailEntity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, customer, deliveryAddress, paymentType, orderDetailTotal, orders);
+    return Objects.hash(id, customer, shippingAddress, paymentType, orderDetailTotal, orders);
   }
 
   @Override
@@ -119,14 +120,16 @@ public class OrderDetailEntity {
     }
     OrderDetailEntity other = (OrderDetailEntity) obj;
     return id == other.id && Objects.equals(customer, other.customer)
-        && Objects.equals(deliveryAddress, other.deliveryAddress) && Objects.equals(paymentType, other.paymentType)
+        && Objects.equals(shippingAddress, other.shippingAddress)
+        && Objects.equals(paymentType, other.paymentType)
         && orderDetailTotal == other.orderDetailTotal && Objects.equals(orders, other.orders);
   }
 
   @Override
   public String toString() {
-    return "OrderDetailEntity [id=" + id + ", customer=" + customer + ", deliveryAddress=" + deliveryAddress
-        + ", paymentType=" + paymentType + ", orderDetailTotal=" + orderDetailTotal + ", orders=" + orders + "]";
+    return "OrderDetailEntity [id=" + id + ", customer=" + customer
+      + ", shippingAddress=" + shippingAddress + ", paymentType=" + paymentType
+      + ", orderDetailTotal=" + orderDetailTotal + ", orders=" + orders + "]";
   }
 
 }

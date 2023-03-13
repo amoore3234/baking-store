@@ -1,8 +1,7 @@
 package com.store.db;
 
-import org.hibernate.SessionFactory;
-
 import com.store.core.CustomerCartEntity;
+import org.hibernate.SessionFactory;
 
 public class CustomerCartDaoRepository extends AbstractDaoRepository<CustomerCartEntity> {
 

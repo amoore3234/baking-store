@@ -3,8 +3,8 @@ package com.store.resource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.store.core.CustomerEntity;
-import com.store.core.DeliveryAddressEntity;
 import com.store.core.OrderDetailEntity;
+import com.store.core.ShippingAddressEntity;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
 
   private OrderDetailEntity entity;
   private CustomerEntity customerEntity;
-  private DeliveryAddressEntity deliveryAddressEntity;
+  private ShippingAddressEntity shippingAddressEntity;
   private int statusCode;
 
   @BeforeEach
@@ -27,12 +27,12 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
     statusCode = 200;
     entity = new OrderDetailEntity();
     customerEntity = new CustomerEntity();
-    deliveryAddressEntity = new DeliveryAddressEntity();
+    shippingAddressEntity = new ShippingAddressEntity();
     entity.setId(1L);
     customerEntity.setId(1L);
-    deliveryAddressEntity.setId(1L);
+    shippingAddressEntity.setId(1L);
     entity.setCustomer(customerEntity);
-    entity.setDeliveryAddress(deliveryAddressEntity);
+    entity.setShippingAddress(shippingAddressEntity);
     entity.setPaymentType("test payment type");
     entity.setOrderDetailTotal(1);
   }
@@ -54,16 +54,17 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
 
   @Test
   void testSaveOrderDetail() {
-    Mockito.when(orderDetailDaoRepository.save(Mockito.any(OrderDetailEntity.class))).thenReturn(entity);
+    Mockito.when(orderDetailDaoRepository.save(Mockito.any(OrderDetailEntity.class)))
+      .thenReturn(entity);
     Response response = extension.target("/order-details/add-order-detail")
-      .request().post(Entity.json(entity));
+        .request().post(Entity.json(entity));
 
     response.bufferEntity();
 
     assertThat(response.readEntity(OrderDetailEntity.class).getCustomer().getId())
         .isEqualTo(entity.getCustomer().getId());
-    assertThat(response.readEntity(OrderDetailEntity.class).getDeliveryAddress().getId())
-        .isEqualTo(entity.getDeliveryAddress().getId());
+    assertThat(response.readEntity(OrderDetailEntity.class).getShippingAddress().getId())
+        .isEqualTo(entity.getShippingAddress().getId());
     assertThat(response.readEntity(OrderDetailEntity.class).getPaymentType())
         .isEqualTo(entity.getPaymentType());
     assertThat(response.readEntity(OrderDetailEntity.class).getOrderDetailTotal())
@@ -80,10 +81,10 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
     final int orderDetailTotal = 3;
 
     customerEntity.setId(customerId);
-    deliveryAddressEntity.setId(delveryAddressId);
+    shippingAddressEntity.setId(delveryAddressId);
 
     entity.setCustomer(customerEntity);
-    entity.setDeliveryAddress(deliveryAddressEntity);
+    entity.setShippingAddress(shippingAddressEntity);
     entity.setPaymentType(paymentType);
     entity.setOrderDetailTotal(orderDetailTotal);
 
@@ -95,7 +96,7 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
     assertThat(response.readEntity(OrderDetailEntity.class)
       .getCustomer().getId()).isEqualTo(customerId);
     assertThat(response.readEntity(OrderDetailEntity.class)
-      .getDeliveryAddress().getId()).isEqualTo(delveryAddressId);
+      .getShippingAddress().getId()).isEqualTo(delveryAddressId);
     assertThat(response.readEntity(OrderDetailEntity.class)
       .getPaymentType()).isEqualTo(paymentType);
     assertThat(response.readEntity(OrderDetailEntity.class)
@@ -106,7 +107,7 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
   void testFindById() {
     Mockito.when(orderDetailDaoRepository.getById(1L)).thenReturn(Optional.of(entity));
     OrderDetailEntity response = extension.target("/order-details/1").request()
-      .get(OrderDetailEntity.class);
+        .get(OrderDetailEntity.class);
 
     assertThat(response.getId()).isEqualTo(entity.getId());
     Mockito.verify(orderDetailDaoRepository).getById(1);

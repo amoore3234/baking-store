@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.resource.CustomerEntityResourceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.078 s - in com.store.resource.CustomerEntityResourceTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.612 s - in com.store.resource.CustomerEntityResourceTest
+>>>>>>> d7040de (Removed duplicate resource test)

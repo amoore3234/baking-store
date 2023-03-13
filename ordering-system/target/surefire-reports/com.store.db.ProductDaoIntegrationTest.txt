@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.ProductDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.609 s - in com.store.db.ProductDaoIntegrationTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.219 s - in com.store.db.ProductDaoIntegrationTest
+>>>>>>> d7040de (Removed duplicate resource test)

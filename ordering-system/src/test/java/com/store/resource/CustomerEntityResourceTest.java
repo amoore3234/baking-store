@@ -52,7 +52,8 @@ public class CustomerEntityResourceTest extends AbstractResourceTest {
   @Test
   void testSaveCustomer() {
     Mockito.when(customerDaoRepository.save(Mockito.any(CustomerEntity.class))).thenReturn(entity);
-    Response response = extension.target("/customers/add-customer").request().post(Entity.json(entity));
+    Response response = extension.target("/customers/add-customer")
+        .request().post(Entity.json(entity));
 
     response.bufferEntity();
 
@@ -105,15 +106,24 @@ public class CustomerEntityResourceTest extends AbstractResourceTest {
 
     response.bufferEntity();
 
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerFirstName()).isEqualTo(firstName);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerLastName()).isEqualTo(lastName);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressOne()).isEqualTo(addressOne);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressTwo()).isEqualTo(addressTwo);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerCity()).isEqualTo(city);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerState()).isEqualTo(state);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerZipCode()).isEqualTo(zipCode);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerPhoneNumber()).isEqualTo(phoneNumber);
-    assertThat(response.readEntity(CustomerEntity.class).getCustomerEmail()).isEqualTo(email);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerFirstName())
+      .isEqualTo(firstName);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerLastName())
+      .isEqualTo(lastName);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressOne())
+      .isEqualTo(addressOne);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressTwo())
+      .isEqualTo(addressTwo);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerCity())
+      .isEqualTo(city);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerState())
+      .isEqualTo(state);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerZipCode())
+      .isEqualTo(zipCode);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerPhoneNumber())
+      .isEqualTo(phoneNumber);
+    assertThat(response.readEntity(CustomerEntity.class).getCustomerEmail())
+      .isEqualTo(email);
   }
 
   @Test

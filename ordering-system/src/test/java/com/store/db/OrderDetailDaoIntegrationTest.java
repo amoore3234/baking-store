@@ -38,7 +38,7 @@ public class OrderDetailDaoIntegrationTest extends AbstractDaoRepositoryIntegrat
     final OrderDetailEntity orderDetailEntity = orderDetailDaoRepository.getById(id).get();
 
     assertThat(orderDetailEntity.getCustomer()).isNotNull();
-    assertThat(orderDetailEntity.getDeliveryAddress()).isNotNull();
+    assertThat(orderDetailEntity.getShippingAddress()).isNotNull();
     assertThat(orderDetailEntity.getPaymentType()).isNotNull();
     assertThat(orderDetailEntity.getOrderDetailTotal()).isNotNull();
   }

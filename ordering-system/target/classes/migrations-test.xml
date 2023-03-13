@@ -13,7 +13,7 @@
 
    <changeSet author="amoore" id="load_test_data">
      <loadData file="test_customers.csv" tableName="customers" />
-     <loadData file="test_delivery_address.csv" tableName="delivery_address" />
+     <loadData file="test_shipping_address.csv" tableName="shipping_address" />
      <loadData file="test_order_details.csv" tableName="order_details" />
      <loadData file="test_orders.csv" tableName="orders" />
      <loadData file="test_products.csv" tableName="products" />

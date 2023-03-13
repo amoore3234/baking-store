@@ -24,6 +24,10 @@ public class ProductEntityResource {
     this.productDaoRepository = productDaoRepository;
   }
 
+  /**
+   * A Response method that fetches all products.
+   * @return a Response that returns a list of products.
+   */
   @GET
   @UnitOfWork
   @Path("find-all")
@@ -35,6 +39,11 @@ public class ProductEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that retrieves a product by id.
+   * @param id defines a product's id.
+   * @return a Response that returns a product object.
+   */
   @GET
   @UnitOfWork
   @Path("/{id}")
@@ -46,6 +55,12 @@ public class ProductEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that saves a product.
+   * @param productEntity {@link ProductEntity}
+   *      defines the ProductEntity class.
+   * @return a Response that returns a product object.
+   */
   @POST
   @UnitOfWork
   @Path("add-product")
@@ -57,6 +72,11 @@ public class ProductEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that updates a product.
+   * @param id defines a product's id.
+   * @return a Response that returns a product object.
+   */
   @PUT
   @UnitOfWork
   @Path("{id}")
@@ -68,6 +88,11 @@ public class ProductEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that deletes a product.
+   * @param id defines a product's id.
+   * @return a Response that returns an empty object.
+   */
   @DELETE
   @UnitOfWork
   @Path("{id}")

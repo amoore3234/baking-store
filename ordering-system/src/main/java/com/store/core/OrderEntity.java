@@ -1,7 +1,5 @@
 package com.store.core;
 
-import java.time.OffsetDateTime;
-import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,6 +10,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+
+import java.time.OffsetDateTime;
+import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
@@ -105,15 +106,15 @@ public class OrderEntity {
       return false;
     }
     OrderEntity other = (OrderEntity) obj;
-    return id == other.id && Objects.equals(orderDetail, other.orderDetail) && Objects.equals(product, other.product)
-        && Objects.equals(orderDate, other.orderDate)
+    return id == other.id && Objects.equals(orderDetail, other.orderDetail)
+      && Objects.equals(product, other.product) && Objects.equals(orderDate, other.orderDate)
         && Double.doubleToLongBits(orderTotal) == Double.doubleToLongBits(other.orderTotal);
   }
 
   @Override
   public String toString() {
-    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product=" + product + ", orderDate="
-        + orderDate + ", orderTotal=" + orderTotal + "]";
+    return "OrderEntity [id=" + id + ", orderDetail=" + orderDetail + ", product="
+      + product + ", orderDate=" + orderDate + ", orderTotal=" + orderTotal + "]";
   }
 
 }

@@ -2,14 +2,22 @@ com/store/db/CustomerCartDaoIntegrationTest.class
 com/store/db/CustomerDaoIntegrationTest.class
 com/store/db/OrderDetailDaoIntegrationTest.class
 com/store/db/EntityUtil.class
+com/store/db/ShippingAddressDaoIntegrationTest.class
 com/store/resource/OrderDetailEntityResourceTest.class
 com/store/resource/ProductEntityResourceTest.class
+com/store/resource/ShippingAddressEntityResourceTest.class
 com/store/resource/AbstractResourceTest.class
 com/store/db/CartDaoIntegrationTest.class
 com/store/db/OrderDaoIntegrationTest.class
 com/store/db/ProductDaoIntegrationTest.class
+<<<<<<< HEAD
+com/store/resource/CustomerEntityResourceTest.class
+com/store/resource/OrderEntityResourceTest.class
+com/store/db/AbstractDaoRepositoryIntegrationTest.class
+=======
 com/store/db/DeliveryAddressDaoIntegrationTest.class
 com/store/resource/CustomerEntityResourceTest.class
 com/store/resource/OrderEntityResourceTest.class
 com/store/db/AbstractDaoRepositoryIntegrationTest.class
 com/store/resource/DeliveryAddressEntityResourceTest.class
+>>>>>>> d7040de (Removed duplicate resource test)

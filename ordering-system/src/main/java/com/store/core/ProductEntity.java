@@ -1,7 +1,5 @@
 package com.store.core;
 
-import java.util.List;
-import java.util.Objects;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,6 +8,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "products")
@@ -26,7 +27,7 @@ public class ProductEntity {
   private String productName;
 
   @Nullable
-  @Column(name ="product_type")
+  @Column(name = "product_type")
   private String productType;
 
   @Nullable
@@ -104,7 +105,8 @@ public class ProductEntity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, productName, productType, productPrice, productDescription, productQuantity, orders);
+    return Objects.hash(id, productName, productType, productPrice,
+      productDescription, productQuantity, orders);
   }
 
   @Override
@@ -119,15 +121,16 @@ public class ProductEntity {
     return id == other.id && Objects.equals(productName, other.productName)
         && Objects.equals(productType, other.productType)
         && Double.doubleToLongBits(productPrice) == Double.doubleToLongBits(other.productPrice)
-        && Objects.equals(productDescription, other.productDescription) && productQuantity == other.productQuantity
+        && Objects.equals(productDescription, other.productDescription)
+        && productQuantity == other.productQuantity
         && Objects.equals(orders, other.orders);
   }
 
   @Override
   public String toString() {
-    return "ProductEntity [id=" + id + ", productName=" + productName + ", productType=" + productType
-        + ", productPrice=" + productPrice + ", productDescription=" + productDescription + ", productQuantity="
-        + productQuantity + ", orders=" + orders + "]";
+    return "ProductEntity [id=" + id + ", productName=" + productName + ", productType="
+      + productType + ", productPrice=" + productPrice + ", productDescription="
+      + productDescription + ", productQuantity=" + productQuantity + ", orders=" + orders + "]";
   }
 
 }

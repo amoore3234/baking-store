@@ -97,7 +97,8 @@ public class OrderEntityResourceTest extends AbstractResourceTest {
     assertThat(response.readEntity(OrderEntity.class).getOrderDate()).isEqualTo(orderDate);
     assertThat(response.readEntity(OrderEntity.class).getOrderTotal()).isEqualTo(orderTotal);
     assertThat(response.readEntity(OrderEntity.class).getProduct().getId()).isEqualTo(productId);
-    assertThat(response.readEntity(OrderEntity.class).getOrderDetail().getId()).isEqualTo(orderDetailId);
+    assertThat(response.readEntity(OrderEntity.class).getOrderDetail().getId())
+      .isEqualTo(orderDetailId);
 
   }
 

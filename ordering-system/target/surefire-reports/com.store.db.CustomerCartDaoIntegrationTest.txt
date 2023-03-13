@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.CustomerCartDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.697 s - in com.store.db.CustomerCartDaoIntegrationTest
+=======
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.14 s - in com.store.db.CustomerCartDaoIntegrationTest
+>>>>>>> d7040de (Removed duplicate resource test)

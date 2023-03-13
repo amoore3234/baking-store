@@ -1,8 +1,7 @@
 package com.store.db;
 
-import org.hibernate.SessionFactory;
-
 import com.store.core.OrderEntity;
+import org.hibernate.SessionFactory;
 
 public class OrderDaoRepository extends AbstractDaoRepository<OrderEntity> {
 

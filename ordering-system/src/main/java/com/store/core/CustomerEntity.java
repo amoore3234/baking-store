@@ -1,7 +1,5 @@
 package com.store.core;
 
-import java.io.Serializable;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
@@ -11,6 +9,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "customers")
@@ -190,99 +192,44 @@ public class CustomerEntity implements Serializable {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((customerFirstName == null) ? 0 : customerFirstName.hashCode());
-    result = prime * result + ((customerLastName == null) ? 0 : customerLastName.hashCode());
-    result = prime * result + ((customerAddressOne == null) ? 0 : customerAddressOne.hashCode());
-    result = prime * result + ((customerAddressTwo == null) ? 0 : customerAddressTwo.hashCode());
-    result = prime * result + ((customerCity == null) ? 0 : customerCity.hashCode());
-    result = prime * result + ((customerState == null) ? 0 : customerState.hashCode());
-    result = prime * result + ((customerZipCode == null) ? 0 : customerZipCode.hashCode());
-    result = prime * result + ((customerPhoneNumber == null) ? 0 : customerPhoneNumber.hashCode());
-    result = prime * result + ((customerEmail == null) ? 0 : customerEmail.hashCode());
-    result = prime * result + ((customers == null) ? 0 : customers.hashCode());
-    result = prime * result + ((customerCarts == null) ? 0 : customerCarts.hashCode());
-    return result;
+    return Objects.hash(id, customerFirstName, customerLastName, customerAddressOne,
+    customerAddressTwo, customerCity, customerState, customerZipCode,
+    customerPhoneNumber, customerEmail, customers, customerCarts);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof CustomerEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     CustomerEntity other = (CustomerEntity) obj;
-    if (id != other.id)
-      return false;
-    if (customerFirstName == null) {
-      if (other.customerFirstName != null)
-        return false;
-    } else if (!customerFirstName.equals(other.customerFirstName))
-      return false;
-    if (customerLastName == null) {
-      if (other.customerLastName != null)
-        return false;
-    } else if (!customerLastName.equals(other.customerLastName))
-      return false;
-    if (customerAddressOne == null) {
-      if (other.customerAddressOne != null)
-        return false;
-    } else if (!customerAddressOne.equals(other.customerAddressOne))
-      return false;
-    if (customerAddressTwo == null) {
-      if (other.customerAddressTwo != null)
-        return false;
-    } else if (!customerAddressTwo.equals(other.customerAddressTwo))
-      return false;
-    if (customerCity == null) {
-      if (other.customerCity != null)
-        return false;
-    } else if (!customerCity.equals(other.customerCity))
-      return false;
-    if (customerState == null) {
-      if (other.customerState != null)
-        return false;
-    } else if (!customerState.equals(other.customerState))
-      return false;
-    if (customerZipCode == null) {
-      if (other.customerZipCode != null)
-        return false;
-    } else if (!customerZipCode.equals(other.customerZipCode))
-      return false;
-    if (customerPhoneNumber == null) {
-      if (other.customerPhoneNumber != null)
-        return false;
-    } else if (!customerPhoneNumber.equals(other.customerPhoneNumber))
-      return false;
-    if (customerEmail == null) {
-      if (other.customerEmail != null)
-        return false;
-    } else if (!customerEmail.equals(other.customerEmail))
-      return false;
-    if (customers == null) {
-      if (other.customers != null)
-        return false;
-    } else if (!customers.equals(other.customers))
-      return false;
-    if (customerCarts == null) {
-      if (other.customerCarts != null)
-        return false;
-    } else if (!customerCarts.equals(other.customerCarts))
-      return false;
-    return true;
+    return id == other.id && Objects.equals(customerFirstName, other.customerFirstName)
+        && Objects.equals(customerLastName, other.customerLastName)
+        && Objects.equals(customerAddressOne, other.customerAddressOne)
+        && Objects.equals(customerAddressTwo, other.customerAddressTwo)
+        && Objects.equals(customerCity, other.customerCity)
+        && Objects.equals(customerState, other.customerState)
+        && Objects.equals(customerZipCode, other.customerZipCode)
+        && Objects.equals(customerPhoneNumber, other.customerPhoneNumber)
+        && Objects.equals(customerEmail, other.customerEmail)
+        && Objects.equals(customers, other.customers)
+        && Objects.equals(customerCarts, other.customerCarts);
   }
 
   @Override
   public String toString() {
-    return "CustomerEntity [id=" + id + ", customerFirstName=" + customerFirstName + ", customerLastName="
-        + customerLastName + ", customerAddressOne=" + customerAddressOne + ", customerAddressTwo=" + customerAddressTwo
-        + ", customerCity=" + customerCity + ", customerState=" + customerState + ", customerZipCode=" + customerZipCode
-        + ", customerPhoneNumber=" + customerPhoneNumber + ", customerEmail=" + customerEmail + ", customers="
-        + customers + ", customerCarts=" + customerCarts + "]";
+    return "CustomerEntity [id=" + id + ", customerFirstName="
+      + customerFirstName + ", customerLastName=" + customerLastName + ", customerAddressOne="
+      + customerAddressOne + ", customerAddressTwo=" + customerAddressTwo
+      + ", customerCity=" + customerCity + ", customerState="
+      + customerState + ", customerZipCode=" + customerZipCode
+      + ", customerPhoneNumber=" + customerPhoneNumber + ", customerEmail="
+      + customerEmail + ", customers=" + customers + ", customerCarts=" + customerCarts + "]";
   }
+
+
 
 }

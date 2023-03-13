@@ -1,17 +1,16 @@
 package com.store.db;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
-
-import org.hibernate.SessionFactory;
-
 import com.store.core.CartEntity;
 import com.store.core.CustomerCartEntity;
 import com.store.core.CustomerEntity;
-import com.store.core.DeliveryAddressEntity;
 import com.store.core.OrderDetailEntity;
 import com.store.core.OrderEntity;
 import com.store.core.ProductEntity;
+import com.store.core.ShippingAddressEntity;
+
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import org.hibernate.SessionFactory;
 
 class EntityUtil {
 
@@ -35,20 +34,21 @@ class EntityUtil {
     return customerEntity;
   }
 
-  static DeliveryAddressEntity deliveryAddressTestEntity(SessionFactory sessionFactory) {
-    final DeliveryAddressDaoRepository deliveryAddressDaoRepository = new DeliveryAddressDaoRepository(sessionFactory);
+  static ShippingAddressEntity shippingAddressTestEntity(SessionFactory sessionFactory) {
+    final ShippingAddressDaoRepository shippingAddressDaoRepository =
+        new ShippingAddressDaoRepository(sessionFactory);
 
-    final DeliveryAddressEntity deliveryAddressEntity = new DeliveryAddressEntity();
-    deliveryAddressEntity.setDeliveryAddressName("test name");
-    deliveryAddressEntity.setDeliveryAddressOne("test address one");
-    deliveryAddressEntity.setDeliveryAddressTwo("test address two");
-    deliveryAddressEntity.setDeliveryAddressCity("test city");
-    deliveryAddressEntity.setDeliveryAddressState("CA");
-    deliveryAddressEntity.setDeliveryAddressZipCode("00000");
-    deliveryAddressEntity.setDeliveryAddressPhoneNumber("000-000-0000");
-    deliveryAddressEntity.setDeliveryAddressEmail("test email");
-    deliveryAddressDaoRepository.save(deliveryAddressEntity);
-    return deliveryAddressEntity;
+    final ShippingAddressEntity shippingAddressEntity = new ShippingAddressEntity();
+    shippingAddressEntity.setShippingAddressName("test name");
+    shippingAddressEntity.setShippingAddressOne("test address one");
+    shippingAddressEntity.setShippingAddressTwo("test address two");
+    shippingAddressEntity.setShippingAddressCity("test city");
+    shippingAddressEntity.setShippingAddressState("CA");
+    shippingAddressEntity.setShippingAddressZipCode("00000");
+    shippingAddressEntity.setShippingAddressPhoneNumber("000-000-0000");
+    shippingAddressEntity.setShippingAddressEmail("test email");
+    shippingAddressDaoRepository.save(shippingAddressEntity);
+    return shippingAddressEntity;
   }
 
   static ProductEntity productTestEntity(SessionFactory sessionFactory) {
@@ -66,11 +66,12 @@ class EntityUtil {
   }
 
   static OrderDetailEntity orderDetailTestEntity(SessionFactory sessionFactory) {
-    final OrderDetailDaoRepository orderDetailDaoRepository = new OrderDetailDaoRepository(sessionFactory);
+    final OrderDetailDaoRepository orderDetailDaoRepository =
+        new OrderDetailDaoRepository(sessionFactory);
 
     final OrderDetailEntity orderDetailEntity = new OrderDetailEntity();
     orderDetailEntity.setCustomer(customerTestEntity(sessionFactory));
-    orderDetailEntity.setDeliveryAddress(deliveryAddressTestEntity(sessionFactory));
+    orderDetailEntity.setShippingAddress(shippingAddressTestEntity(sessionFactory));
     orderDetailEntity.setPaymentType("test payment type");
     orderDetailEntity.setOrderDetailTotal(1);
     orderDetailDaoRepository.save(orderDetailEntity);
@@ -91,7 +92,8 @@ class EntityUtil {
   }
 
   static CustomerCartEntity customerCartTestEntity(SessionFactory sessionFactory) {
-    final CustomerCartDaoRepository customerCartDaoRepository = new CustomerCartDaoRepository(sessionFactory);
+    final CustomerCartDaoRepository customerCartDaoRepository =
+        new CustomerCartDaoRepository(sessionFactory);
 
     final CustomerCartEntity customerCartEntity = new CustomerCartEntity();
     customerCartEntity.setCustomer(customerTestEntity(sessionFactory));

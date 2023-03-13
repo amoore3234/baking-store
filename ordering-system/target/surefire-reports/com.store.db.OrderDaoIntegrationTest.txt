@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.OrderDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.123 s - in com.store.db.OrderDaoIntegrationTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.4 s - in com.store.db.OrderDaoIntegrationTest
+>>>>>>> d7040de (Removed duplicate resource test)

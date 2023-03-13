@@ -2,14 +2,15 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/DeliveryAddressEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ShippingAddressEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/CustomerEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ProductEntityResourceTest.java
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/DeliveryAddressDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderDetailEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDetailDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ProductDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ShippingAddressDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/AbstractResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java

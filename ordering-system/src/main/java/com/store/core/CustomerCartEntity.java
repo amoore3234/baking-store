@@ -11,6 +11,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "customer_carts")
 public class CustomerCartEntity {
@@ -61,41 +63,25 @@ public class CustomerCartEntity {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((customer == null) ? 0 : customer.hashCode());
-    result = prime * result + ((cart == null) ? 0 : cart.hashCode());
-    return result;
+    return Objects.hash(id, customer, cart);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof CustomerCartEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     CustomerCartEntity other = (CustomerCartEntity) obj;
-    if (id != other.id)
-      return false;
-    if (customer == null) {
-      if (other.customer != null)
-        return false;
-    } else if (!customer.equals(other.customer))
-      return false;
-    if (cart == null) {
-      if (other.cart != null)
-        return false;
-    } else if (!cart.equals(other.cart))
-      return false;
-    return true;
+    return id == other.id && Objects.equals(customer, other.customer)
+      && Objects.equals(cart, other.cart);
   }
 
   @Override
   public String toString() {
-    return "CustomerCart [id=" + id + ", customer=" + customer + ", cart=" + cart + "]";
+    return "CustomerCartEntity [id=" + id + ", customer=" + customer + ", cart=" + cart + "]";
   }
 
 }

@@ -18,64 +18,88 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class CustomerEntityResource {
 
-   private final CustomerDaoRepository customerDaoRepository;
+  private final CustomerDaoRepository customerDaoRepository;
 
-   public CustomerEntityResource(CustomerDaoRepository customerDaoRepository) {
-      this.customerDaoRepository = customerDaoRepository;
-   }
+  public CustomerEntityResource(CustomerDaoRepository customerDaoRepository) {
+    this.customerDaoRepository = customerDaoRepository;
+  }
 
-   @GET
-   @UnitOfWork
-   @Path("find-all")
-   public Response findAll() {
+  /**
+   * A Response that fetches all customers.
+   * @return a Response that returns a list of customers.
+   */
+  @GET
+  @UnitOfWork
+  @Path("find-all")
+  public Response findAll() {
 
-      List<CustomerEntity> findAll = customerDaoRepository.findAll();
-      return Response
-            .ok(findAll)
-            .build();
-   }
+    List<CustomerEntity> findAll = customerDaoRepository.findAll();
+    return Response
+          .ok(findAll)
+          .build();
+  }
 
-   @GET
-   @UnitOfWork
-   @Path("/{id}")
-   public Response getById(@PathParam("id") long id) {
+  /**
+   * A Response that retrieves a customer by id.
+   * @param id defines a customer's id.
+   * @return a Response that returns a customer object.
+   */
+  @GET
+  @UnitOfWork
+  @Path("/{id}")
+  public Response getById(@PathParam("id") long id) {
 
-      CustomerEntity customerEntity = customerDaoRepository.getById(id).get();
-      return Response
-            .ok(customerEntity)
-            .build();
-   }
+    CustomerEntity customerEntity = customerDaoRepository.getById(id).get();
+    return Response
+          .ok(customerEntity)
+          .build();
+  }
 
-   @POST
-   @UnitOfWork
-   @Path("add-customer")
-   public Response addCustomer(CustomerEntity customerEntity) {
+  /**
+   * A Response method that saves a customer.
+   * @param customerEntity {@link CustomerEntity} defines the CustomerEntity class.
+   * @return a Response that returns a customer object.
+   */
+  @POST
+  @UnitOfWork
+  @Path("add-customer")
+  public Response addCustomer(CustomerEntity customerEntity) {
 
-      CustomerEntity addCustomer = customerDaoRepository.save(customerEntity);
-      return Response
-            .ok(addCustomer)
-            .build();
-   }
+    CustomerEntity addCustomer = customerDaoRepository.save(customerEntity);
+    return Response
+          .ok(addCustomer)
+          .build();
+  }
 
-   @PUT
-   @UnitOfWork
-   @Path("{id}")
-   public Response updateCustomer(@PathParam("id") long id) {
+  /**
+   * A Response method that updates a customer.
+   * @param id defines a customer's id.
+   * @return a Response that returns a customer object.
+   */
+  @PUT
+  @UnitOfWork
+  @Path("{id}")
+  public Response updateCustomer(@PathParam("id") long id) {
 
-      CustomerEntity updateCustomer = customerDaoRepository.getById(id).get();
-      return Response
-            .ok(updateCustomer)
-            .build();
-   }
+    CustomerEntity updateCustomer = customerDaoRepository.getById(id).get();
+    return Response
+          .ok(updateCustomer)
+          .build();
+  }
 
-   @DELETE
-   @UnitOfWork
-   @Path("{id}")
-   public Response deleteCustomerById(@PathParam("id") long id) {
+  /**
+   * A Response method that deletes a customer.
+   * @param id defines a customer's id.
+   * @return a Response that returns an empty object.
+   */
+  @DELETE
+  @UnitOfWork
+  @Path("{id}")
+  public Response deleteCustomerById(@PathParam("id") long id) {
 
-      customerDaoRepository.deleteById(id);
-      return Response
-            .ok()
-            .build();
-   }
+    customerDaoRepository.deleteById(id);
+    return Response
+          .ok()
+          .build();
+  }
 }

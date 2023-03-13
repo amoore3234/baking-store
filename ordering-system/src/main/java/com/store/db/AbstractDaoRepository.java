@@ -1,11 +1,9 @@
 package com.store.db;
 
+import io.dropwizard.hibernate.AbstractDAO;
 import java.util.List;
 import java.util.Optional;
-
 import org.hibernate.SessionFactory;
-
-import io.dropwizard.hibernate.AbstractDAO;
 
 public abstract class AbstractDaoRepository<T> extends AbstractDAO<T> {
 

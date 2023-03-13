@@ -2,13 +2,11 @@ package com.store.db;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.store.core.CustomerEntity;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import com.store.core.CustomerEntity;
 
 public class CustomerDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 

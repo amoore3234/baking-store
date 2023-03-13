@@ -48,7 +48,8 @@ public class ProductEntityResourceTest extends AbstractResourceTest {
   @Test
   void testSaveCustomer() {
     Mockito.when(productDaoRepository.save(Mockito.any(ProductEntity.class))).thenReturn(entity);
-    Response response = extension.target("/products/add-product").request().post(Entity.json(entity));
+    Response response = extension.target("/products/add-product")
+        .request().post(Entity.json(entity));
 
     response.bufferEntity();
 
@@ -85,11 +86,16 @@ public class ProductEntityResourceTest extends AbstractResourceTest {
 
     response.bufferEntity();
 
-    assertThat(response.readEntity(ProductEntity.class).getProductName()).isEqualTo(productName);
-    assertThat(response.readEntity(ProductEntity.class).getProductType()).isEqualTo(productType);
-    assertThat(response.readEntity(ProductEntity.class).getProductDescription()).isEqualTo(productDesc);
-    assertThat(response.readEntity(ProductEntity.class).getProductPrice()).isEqualTo(productPrice);
-    assertThat(response.readEntity(ProductEntity.class).getProductQuantity()).isEqualTo(productQuantity);
+    assertThat(response.readEntity(ProductEntity.class).getProductName())
+      .isEqualTo(productName);
+    assertThat(response.readEntity(ProductEntity.class).getProductType())
+      .isEqualTo(productType);
+    assertThat(response.readEntity(ProductEntity.class).getProductDescription())
+      .isEqualTo(productDesc);
+    assertThat(response.readEntity(ProductEntity.class).getProductPrice())
+      .isEqualTo(productPrice);
+    assertThat(response.readEntity(ProductEntity.class).getProductQuantity()
+      ).isEqualTo(productQuantity);
 
   }
 

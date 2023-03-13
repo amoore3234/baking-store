@@ -24,6 +24,10 @@ public class OrderEntityResource {
     this.orderDaoRepository = orderDaoRepository;
   }
 
+  /**
+   * A Response method to find all orders.
+   * @return a Response that returns a list of orders.
+   */
   @GET
   @UnitOfWork
   @Path("find-all")
@@ -35,6 +39,11 @@ public class OrderEntityResource {
           .build();
   }
 
+  /**
+   * A Response method the retrieves an order by id.
+   * @param id defines an order's id.
+   * @return a Response that returns the order entity object.
+   */
   @GET
   @UnitOfWork
   @Path("/{id}")
@@ -46,6 +55,11 @@ public class OrderEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that saves an order.
+   * @param orderEntity {@link OrderEntity} defines an order object.
+   * @return a Response that saves an order and returns the OrderEntity object.
+   */
   @POST
   @UnitOfWork
   @Path("add-order")
@@ -57,6 +71,11 @@ public class OrderEntityResource {
           .build();
   }
 
+  /**
+   * A Response method to update an order.
+   * @param id defines an order's id.
+   * @return a Response that returns an updated order entity object.
+   */
   @PUT
   @UnitOfWork
   @Path("{id}")
@@ -68,6 +87,11 @@ public class OrderEntityResource {
           .build();
   }
 
+  /**
+   * A Response method that deletes an order by its id.
+   * @param id defines an order's id.
+   * @return a Response that returns nothing.
+   */
   @DELETE
   @UnitOfWork
   @Path("{id}")

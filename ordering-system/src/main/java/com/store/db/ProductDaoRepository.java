@@ -1,8 +1,7 @@
 package com.store.db;
 
-import org.hibernate.SessionFactory;
-
 import com.store.core.ProductEntity;
+import org.hibernate.SessionFactory;
 
 public class ProductDaoRepository extends AbstractDaoRepository<ProductEntity> {
 

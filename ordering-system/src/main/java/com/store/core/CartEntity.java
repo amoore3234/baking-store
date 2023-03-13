@@ -10,6 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import java.util.Objects;
 
 @Entity
 @Table(name = "carts")
@@ -59,38 +60,27 @@ public class CartEntity {
 
   @Override
   public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + (int) (id ^ (id >>> 32));
-    result = prime * result + ((product == null) ? 0 : product.hashCode());
-    result = prime * result + cartQuantity;
-    return result;
+    return Objects.hash(id, product, cartQuantity);
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj)
+    if (this == obj) {
       return true;
-    if (obj == null)
+    }
+    if (!(obj instanceof CartEntity)) {
       return false;
-    if (getClass() != obj.getClass())
-      return false;
+    }
     CartEntity other = (CartEntity) obj;
-    if (id != other.id)
-      return false;
-    if (product == null) {
-      if (other.product != null)
-        return false;
-    } else if (!product.equals(other.product))
-      return false;
-    if (cartQuantity != other.cartQuantity)
-      return false;
-    return true;
+    return id == other.id && Objects.equals(product, other.product)
+      && cartQuantity == other.cartQuantity;
   }
 
   @Override
   public String toString() {
     return "CartEntity [id=" + id + ", product=" + product + ", cartQuantity=" + cartQuantity + "]";
   }
+
+
 
 }
