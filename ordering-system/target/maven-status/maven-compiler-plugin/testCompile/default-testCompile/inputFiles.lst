@@ -1,77 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2209d14 (Implement customer entity resource class)
-=======
->>>>>>> 82b4458 (Implement customer entity resource)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
-=======
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
-=======
-=======
->>>>>>> a7d4a20 (Add correct extension support)
->>>>>>> 3f28287 (Implement customer entity resource)
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\DeliveryAddressDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\CustomerDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\AbstractDaoRepositoryIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\CustomerCartDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\resource\CustomerEntityResourceTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\CartDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\EntityUtil.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDetailDaoIntegrationTest.java
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDaoIntegrationTest.java
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ee9bb08 (Modified env file)
-=======
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
-=======
->>>>>>> ee9bb08 (Modified env file)
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
-=======
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
-=======
->>>>>>> ee9bb08 (Modified env file)
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
->>>>>>> e30f984 (Implement customer entity resource)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
-=======
->>>>>>> 2209d14 (Implement customer entity resource class)
-=======
->>>>>>> 82b4458 (Implement customer entity resource)
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/DeliveryAddressDaoIntegrationTest.java
->>>>>>> ab94d9b (Implement delivery address resource class)
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/DeliveryAddressEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/CustomerEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ProductEntityResourceTest.java
@@ -79,66 +8,8 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ProductDa
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderDetailEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDetailDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ProductDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/AbstractResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
-<<<<<<< HEAD
-/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/DeliveryAddressResourceTest.java
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2209d14 (Implement customer entity resource class)
-=======
->>>>>>> 82b4458 (Implement customer entity resource)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 49bd613 (Modified env file)
-=======
-<<<<<<< HEAD
->>>>>>> ee9bb08 (Modified env file)
-=======
-<<<<<<< HEAD
->>>>>>> 49bd613 (Modified env file)
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
->>>>>>> 49bd613 (Modified env file)
-=======
->>>>>>> ee9bb08 (Modified env file)
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
-=======
->>>>>>> 49bd613 (Modified env file)
->>>>>>> 0fb1e4f (Configure docker compose file to include liquibase)
-=======
->>>>>>> 49bd613 (Modified env file)
-=======
->>>>>>> ee9bb08 (Modified env file)
->>>>>>> 6179aae (Modified env, condfig, and docker-compose file.)
-=======
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\resource\AbstractResourceTest.java
->>>>>>> 677fc77 (Implement customer entity resource)
->>>>>>> 7b8ff0e (Add migration file)
-<<<<<<< HEAD
->>>>>>> 67b8293 (Add migration file)
-=======
-=======
-C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\resource\AbstractResourceTest.java
->>>>>>> a7d4a20 (Add correct extension support)
->>>>>>> 3f28287 (Implement customer entity resource)
->>>>>>> e30f984 (Implement customer entity resource)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 67cbaf9 (Modified env, condfig, and docker-compose file.)
-=======
->>>>>>> 2209d14 (Implement customer entity resource class)
-=======
->>>>>>> 82b4458 (Implement customer entity resource)
->>>>>>> ab94d9b (Implement delivery address resource class)
