@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/OrderingSystemConfiguration.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/ShippingAddressDaoRepository.java
@@ -25,3 +26,28 @@
 =======
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/DeliveryAddressEntityResource.java
 >>>>>>> d7040de (Removed duplicate resource test)
+=======
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\ProductEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\AbstractDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\ProductDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\resource\CustomerEntityResource.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\OrderingSystemApplication.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\ShippingAddressEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\CartDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\CustomerCartEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\OrderDetailEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\OrderDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\CustomerDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\OrderingSystemConfiguration.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\resource\ShippingAddressEntityResource.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\resource\ProductEntityResource.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\CartEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\ShippingAddressDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\health\AppHealthCheck.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\resource\OrderDetailEntityResource.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\resource\OrderEntityResource.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\CustomerCartDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\CustomerEntity.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\OrderDetailDaoRepository.java
+C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\OrderEntity.java
+>>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)

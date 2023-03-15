@@ -2,7 +2,11 @@
 Test set: com.store.resource.CustomerEntityResourceTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.078 s - in com.store.resource.CustomerEntityResourceTest
 =======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.612 s - in com.store.resource.CustomerEntityResourceTest
 >>>>>>> d7040de (Removed duplicate resource test)
+=======
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.858 s - in com.store.resource.CustomerEntityResourceTest
+>>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)

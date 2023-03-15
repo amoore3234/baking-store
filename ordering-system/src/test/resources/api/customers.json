@@ -1,0 +1,11 @@
+{
+  "customerFirstName": "Mary",
+  "customerLastName": "Mack",
+  "customerAddressOne": "3245 Baldwin",
+  "customerAddressTwo": "St",
+  "customerCity": "Pomona",
+  "customerState": "CA",
+  "customerZipCode": "91123",
+  "customerPhoneNumber": "9097738978",
+  "customerEmail": "mack@gmail.com"
+}

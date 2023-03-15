@@ -2,7 +2,11 @@
 Test set: com.store.db.CartDaoIntegrationTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.071 s - in com.store.db.CartDaoIntegrationTest
 =======
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.677 s - in com.store.db.CartDaoIntegrationTest
 >>>>>>> d7040de (Removed duplicate resource test)
+=======
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 327.146 s - in com.store.db.CartDaoIntegrationTest
+>>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
