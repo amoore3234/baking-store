@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.db.OrderDetailDaoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.93 s - in com.store.db.OrderDetailDaoIntegrationTest
+=======
 -------------------------------------------------------------------------------
 Test set: com.store.db.OrderDetailDaoIntegrationTest
 -------------------------------------------------------------------------------
@@ -10,3 +16,4 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.382 s - in com
 =======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.658 s - in com.store.db.OrderDetailDaoIntegrationTest
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
+>>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)

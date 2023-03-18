@@ -1,4 +1,0 @@
-customer_id,shipping_address_id,payment_type,order_detail_total
-3,2,visa,1
-1,1,mastercard,2
-2,3,visa,1

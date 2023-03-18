@@ -1,5 +1,6 @@
 package com.store.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,53 +9,63 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "shipping_address")
-public class ShippingAddressEntity {
+public class ShippingAddressEntity implements Serializable {
 
   @Id
   @Nullable
+  @JsonProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "shipping_address_id", nullable = false, unique = true)
   private long id;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_name")
   private String shippingAddressName;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_one")
   private String shippingAddressOne;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_two")
   private String shippingAddressTwo;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_city")
   private String shippingAddressCity;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_state")
   private String shippingAddressState;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_zip_code")
   private String shippingAddressZipCode;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_phone")
   private String shippingAddressPhoneNumber;
 
   @Nullable
+  @JsonProperty
   @Column(name = "shipping_address_email")
   private String shippingAddressEmail;
 
   @Nullable
+  @JsonProperty
   @OneToMany(mappedBy = "shippingAddress")
   private List<OrderDetailEntity> orderDetails;
 

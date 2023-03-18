@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/CustomerJsonTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/ShippingAddressJsonTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ShippingAddressEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/CustomerEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ProductEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderDetailEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/AbstractDaoRepositoryIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDetailDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/OrderEntityResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/OrderDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ProductDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ShippingAddressDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/AbstractResourceTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
+=======
+<<<<<<< HEAD
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/DeliveryAddressEntityResourceTest.java
@@ -33,3 +52,4 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\ShippingA
 C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\EntityUtil.java
 C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDetailDaoIntegrationTest.java
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
+>>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)

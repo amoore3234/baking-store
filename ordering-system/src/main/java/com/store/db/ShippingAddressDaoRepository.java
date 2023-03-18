@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 
 public class ShippingAddressDaoRepository extends AbstractDaoRepository<ShippingAddressEntity> {
 
-  protected ShippingAddressDaoRepository(SessionFactory sessionFactory) {
+  public ShippingAddressDaoRepository(SessionFactory sessionFactory) {
     super(sessionFactory);
   }
 
