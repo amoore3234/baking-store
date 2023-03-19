@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 -------------------------------------------------------------------------------
 Test set: com.store.db.OrderDaoIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.47 s - in com.store.db.OrderDaoIntegrationTest
-=======
-<<<<<<< HEAD
--------------------------------------------------------------------------------
-Test set: com.store.db.OrderDaoIntegrationTest
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.131 s - in com.store.db.OrderDaoIntegrationTest
-=======
--------------------------------------------------------------------------------
-Test set: com.store.db.OrderDaoIntegrationTest
--------------------------------------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.123 s - in com.store.db.OrderDaoIntegrationTest
-=======
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.4 s - in com.store.db.OrderDaoIntegrationTest
->>>>>>> d7040de (Removed duplicate resource test)
-=======
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 71.235 s - in com.store.db.OrderDaoIntegrationTest
->>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
->>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
->>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.598 s - in com.store.db.OrderDaoIntegrationTest
