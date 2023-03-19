@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/OrderingSystemConfiguration.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/ShippingAddressDaoRepository.java
@@ -22,6 +25,8 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/ProductDaoRepository.java
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerDaoRepository.java
@@ -77,3 +82,4 @@ C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\db\OrderDeta
 C:\Users\moore\baking-store\ordering-system\src\main\java\com\store\core\OrderEntity.java
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)

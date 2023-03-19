@@ -2,6 +2,12 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.CartDaoIntegrationTest
 -------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.138 s - in com.store.db.CartDaoIntegrationTest
+=======
+<<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.db.CartDaoIntegrationTest
+-------------------------------------------------------------------------------
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.641 s - in com.store.db.CartDaoIntegrationTest
 =======
 -------------------------------------------------------------------------------
@@ -17,3 +23,4 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.677 s - in co
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 327.146 s - in com.store.db.CartDaoIntegrationTest
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)

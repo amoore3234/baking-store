@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)
 com/store/OrderingSystemApplication$2.class
 com/store/resource/CustomerEntityResource.class
 com/store/core/OrderDetailEntity.class
@@ -24,6 +27,8 @@ com/store/db/CustomerCartDaoRepository.class
 com/store/db/ShippingAddressDaoRepository.class
 com/store/resource/OrderEntityResource.class
 com/store/core/CustomerEntity.class
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 com/store/OrderingSystemApplication$2.class
@@ -83,3 +88,4 @@ com\store\core\ProductEntity.class
 com\store\resource\OrderEntityResource.class
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)

@@ -8,9 +8,11 @@ import com.store.core.OrderEntity;
 import com.store.core.ProductEntity;
 import com.store.core.ShippingAddressEntity;
 import com.store.db.CustomerDaoRepository;
+import com.store.db.OrderDetailDaoRepository;
 import com.store.db.ShippingAddressDaoRepository;
 import com.store.health.AppHealthCheck;
 import com.store.resource.CustomerEntityResource;
+import com.store.resource.OrderDetailEntityResource;
 import com.store.resource.ShippingAddressEntityResource;
 import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
@@ -62,9 +64,12 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
         new CustomerDaoRepository(hibernate.getSessionFactory());
     ShippingAddressDaoRepository shippingAddressDaoRepository =
         new ShippingAddressDaoRepository(hibernate.getSessionFactory());
+    OrderDetailDaoRepository orderDetailDaoRepository =
+        new OrderDetailDaoRepository(hibernate.getSessionFactory());
 
     environment.jersey().register(new CustomerEntityResource(customerDaoRepository));
     environment.jersey().register(new ShippingAddressEntityResource(shippingAddressDaoRepository));
+    environment.jersey().register(new OrderDetailEntityResource(orderDetailDaoRepository));
     environment.healthChecks().register("template", healthCheck);
 
   }

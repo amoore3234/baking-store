@@ -1,0 +1,27 @@
+{
+  "customer": {
+    "id": 1,
+    "customerFirstName": "Mary",
+    "customerLastName": "Mack",
+    "customerAddressOne": "3245 Baldwin",
+    "customerAddressTwo": "St",
+    "customerCity": "Pomona",
+    "customerState": "CA",
+    "customerZipCode": "91123",
+    "customerPhoneNumber": "9097738978",
+    "customerEmail": "mack@gmail.com"
+  },
+  "shippingAddress": {
+    "id": 1,
+    "shippingAddressName":"Bright Lighting",
+    "shippingAddressOne": "34677 Stockton Street",
+    "shippingAddressTwo": "Suite 213",
+    "shippingAddressCity": "Upland",
+    "shippingAddressState": "CA",
+    "shippingAddressZipCode": "91763",
+    "shippingAddressPhoneNumber": "9096758894",
+    "shippingAddressEmail": "shirley.shipley@blighting.com"
+  },
+  "paymentType": "Visa",
+  "orderDetailTotal": 1
+}

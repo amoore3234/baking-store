@@ -2,6 +2,12 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.CustomerDaoIntegrationTest
 -------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.323 s - in com.store.db.CustomerDaoIntegrationTest
+=======
+<<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.db.CustomerDaoIntegrationTest
+-------------------------------------------------------------------------------
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.927 s - in com.store.db.CustomerDaoIntegrationTest
 =======
 -------------------------------------------------------------------------------
@@ -17,3 +23,4 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.4 s - in com.s
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 153.955 s - in com.store.db.CustomerDaoIntegrationTest
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/CustomerJsonTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/ShippingAddressJsonTest.java
@@ -15,6 +18,10 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ProductDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/ShippingAddressDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/AbstractResourceTest.java
+<<<<<<< HEAD
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/OrderDetailJsonTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
+=======
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/EntityUtil.java
 =======
 <<<<<<< HEAD
@@ -53,3 +60,4 @@ C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\EntityUti
 C:\Users\moore\baking-store\ordering-system\src\test\java\com\store\db\OrderDetailDaoIntegrationTest.java
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)

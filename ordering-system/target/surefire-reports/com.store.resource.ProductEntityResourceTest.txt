@@ -2,6 +2,12 @@
 -------------------------------------------------------------------------------
 Test set: com.store.resource.ProductEntityResourceTest
 -------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.367 s - in com.store.resource.ProductEntityResourceTest
+=======
+<<<<<<< HEAD
+-------------------------------------------------------------------------------
+Test set: com.store.resource.ProductEntityResourceTest
+-------------------------------------------------------------------------------
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.096 s - in com.store.resource.ProductEntityResourceTest
 =======
 -------------------------------------------------------------------------------
@@ -17,3 +23,4 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.377 s - in com
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.478 s - in com.store.resource.ProductEntityResourceTest
 >>>>>>> a8f4893 (Implemented serialize and deserialize test for Customer Entity)
 >>>>>>> 408d6ee (Implement serialize and deserialize test for Customer entity class.)
+>>>>>>> 6c9ffa7 (Implement serialize and deserialize test for ShippingAddress entity class.)
