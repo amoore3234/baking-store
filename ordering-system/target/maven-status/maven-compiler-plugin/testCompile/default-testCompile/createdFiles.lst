@@ -1,19 +1,37 @@
+<<<<<<< HEAD
+=======
 com/store/db/CustomerCartDaoIntegrationTest.class
 com/store/db/CustomerDaoIntegrationTest.class
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)
 com/store/db/OrderDetailDaoIntegrationTest.class
-com/store/db/EntityUtil.class
-com/store/db/ShippingAddressDaoIntegrationTest.class
 com/store/resource/OrderDetailEntityResourceTest.class
+<<<<<<< HEAD
+=======
 com/store/api/ShippingAddressJsonTest.class
 com/store/api/OrderDetailJsonTest.class
 com/store/resource/ProductEntityResourceTest.class
 com/store/resource/ShippingAddressEntityResourceTest.class
 com/store/api/ProductJsonTest.class
 com/store/resource/AbstractResourceTest.class
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)
 com/store/db/CartDaoIntegrationTest.class
 com/store/db/OrderDaoIntegrationTest.class
 com/store/api/CustomerJsonTest.class
-com/store/db/ProductDaoIntegrationTest.class
-com/store/resource/CustomerEntityResourceTest.class
 com/store/resource/OrderEntityResourceTest.class
 com/store/db/AbstractDaoRepositoryIntegrationTest.class
+<<<<<<< HEAD
+com/store/db/CustomerCartDaoIntegrationTest.class
+com/store/db/CustomerDaoIntegrationTest.class
+com/store/db/EntityUtil.class
+com/store/db/ShippingAddressDaoIntegrationTest.class
+com/store/api/ShippingAddressJsonTest.class
+com/store/api/OrderDetailJsonTest.class
+com/store/resource/ProductEntityResourceTest.class
+com/store/resource/ShippingAddressEntityResourceTest.class
+com/store/api/ProductJsonTest.class
+com/store/resource/AbstractResourceTest.class
+com/store/api/OrderJsonTest.class
+com/store/db/ProductDaoIntegrationTest.class
+com/store/resource/CustomerEntityResourceTest.class
+=======
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)

@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 
 public class OrderDaoRepository extends AbstractDaoRepository<OrderEntity> {
 
-  protected OrderDaoRepository(SessionFactory sessionFactory) {
+  public OrderDaoRepository(SessionFactory sessionFactory) {
     super(sessionFactory);
   }
 

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.resource.CustomerEntityResourceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.848 s - in com.store.resource.CustomerEntityResourceTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.576 s - in com.store.resource.CustomerEntityResourceTest
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)

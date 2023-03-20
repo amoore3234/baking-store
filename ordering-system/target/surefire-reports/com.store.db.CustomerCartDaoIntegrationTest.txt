@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.CustomerCartDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.507 s - in com.store.db.CustomerCartDaoIntegrationTest
+=======
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.199 s - in com.store.db.CustomerCartDaoIntegrationTest
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)

@@ -10,13 +10,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
-
+import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
-public class OrderEntity {
+public class OrderEntity implements Serializable {
 
   @Id
   @Nullable
@@ -38,7 +38,7 @@ public class OrderEntity {
 
   @Nullable
   @Column(name = "order_date")
-  private OffsetDateTime orderDate;
+  private OffsetDateTime orderDate = OffsetDateTime.now();
 
   @Nullable
   @Column(name = "order_total")

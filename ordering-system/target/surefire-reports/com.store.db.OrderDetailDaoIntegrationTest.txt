@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.OrderDetailDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.949 s - in com.store.db.OrderDetailDaoIntegrationTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.35 s - in com.store.db.OrderDetailDaoIntegrationTest
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)

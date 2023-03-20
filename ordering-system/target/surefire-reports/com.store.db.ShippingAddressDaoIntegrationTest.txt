@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.ShippingAddressDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.623 s - in com.store.db.ShippingAddressDaoIntegrationTest
+=======
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.245 s - in com.store.db.ShippingAddressDaoIntegrationTest
+>>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)

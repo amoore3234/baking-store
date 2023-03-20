@@ -2,6 +2,7 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerCartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/ShippingAddressJsonTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CustomerDaoIntegrationTest.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/api/OrderJsonTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/db/CartDaoIntegrationTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/ShippingAddressEntityResourceTest.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/test/java/com/store/resource/CustomerEntityResourceTest.java
