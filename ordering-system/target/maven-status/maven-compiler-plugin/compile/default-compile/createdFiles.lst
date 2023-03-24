@@ -1,4 +1,5 @@
 com/store/OrderingSystemApplication$2.class
+com/store/resource/CartEntityResource.class
 com/store/resource/CustomerEntityResource.class
 com/store/core/OrderDetailEntity.class
 com/store/resource/ShippingAddressEntityResource.class

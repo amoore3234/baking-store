@@ -9,6 +9,7 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerCartDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/OrderDetailDaoRepository.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/CartEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderDetailEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/ShippingAddressEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerCartEntity.java

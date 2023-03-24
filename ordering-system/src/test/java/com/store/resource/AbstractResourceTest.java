@@ -1,5 +1,6 @@
 package com.store.resource;
 
+import com.store.db.CartDaoRepository;
 import com.store.db.CustomerDaoRepository;
 import com.store.db.OrderDaoRepository;
 import com.store.db.OrderDetailDaoRepository;
@@ -20,9 +21,11 @@ public abstract class AbstractResourceTest {
   final OrderDetailDaoRepository orderDetailDaoRepository =
       Mockito.mock(OrderDetailDaoRepository.class);
   final ProductDaoRepository productDaoRepository =
-        Mockito.mock(ProductDaoRepository.class);
+      Mockito.mock(ProductDaoRepository.class);
   final OrderDaoRepository orderDaoRepository =
       Mockito.mock(OrderDaoRepository.class);
+  final CartDaoRepository cartDaoRepository =
+      Mockito.mock(CartDaoRepository.class);
 
   final ResourceExtension extension = ResourceExtension.builder()
       .addResource(new CustomerEntityResource(customerDaoRepository))
@@ -30,6 +33,7 @@ public abstract class AbstractResourceTest {
       .addResource(new OrderDetailEntityResource(orderDetailDaoRepository))
       .addResource(new ProductEntityResource(productDaoRepository))
       .addResource(new OrderEntityResource(orderDaoRepository))
+      .addResource(new CartEntityResource(cartDaoRepository))
       .build();
 
   public AbstractResourceTest() {

@@ -1,0 +1,11 @@
+{
+  "product": {
+    "id": 1,
+    "productName": "Cupcake cups",
+    "productType": "Cakes",
+    "productPrice": 5.95,
+    "productDescription": "Made out of baking sheets",
+    "productQuantity": 100
+  },
+  "cartQuantity": 1
+}

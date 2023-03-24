@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.store.api.ProductJsonTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s - in com.store.api.ProductJsonTest
-=======
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in com.store.api.ProductJsonTest
->>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in com.store.api.ProductJsonTest

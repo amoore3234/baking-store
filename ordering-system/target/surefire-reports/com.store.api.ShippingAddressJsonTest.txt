@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.store.api.ShippingAddressJsonTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s - in com.store.api.ShippingAddressJsonTest
-=======
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s - in com.store.api.ShippingAddressJsonTest
->>>>>>> 1b63ad5 (Implement serialize and deserialize test for Product entity class.)
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in com.store.api.ShippingAddressJsonTest

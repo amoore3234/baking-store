@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 
 public class CartDaoRepository extends AbstractDaoRepository<CartEntity> {
 
-  protected CartDaoRepository(SessionFactory sessionFactory) {
+  public CartDaoRepository(SessionFactory sessionFactory) {
     super(sessionFactory);
   }
 

@@ -1,5 +1,6 @@
 package com.store.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,25 +11,29 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "carts")
-public class CartEntity {
+public class CartEntity implements Serializable {
 
   @Id
   @Nullable
+  @JsonProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "cart_id", nullable = false, unique = true)
   private long id;
 
   @Nullable
   @NotNull
+  @JsonProperty
   @ManyToOne
   @JoinColumn(name = "product_id", referencedColumnName = "product_id")
   private ProductEntity product;
 
   @Nullable
+  @JsonProperty
   @Column(name = "cart_quantity")
   private int cartQuantity;
 
@@ -38,6 +43,10 @@ public class CartEntity {
   @Nullable
   public long getId() {
     return id;
+  }
+
+  public void setId(@Nullable long id) {
+    this.id = id;
   }
 
   @Nullable
@@ -80,7 +89,5 @@ public class CartEntity {
   public String toString() {
     return "CartEntity [id=" + id + ", product=" + product + ", cartQuantity=" + cartQuantity + "]";
   }
-
-
 
 }

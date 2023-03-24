@@ -7,12 +7,14 @@ import com.store.core.OrderDetailEntity;
 import com.store.core.OrderEntity;
 import com.store.core.ProductEntity;
 import com.store.core.ShippingAddressEntity;
+import com.store.db.CartDaoRepository;
 import com.store.db.CustomerDaoRepository;
 import com.store.db.OrderDaoRepository;
 import com.store.db.OrderDetailDaoRepository;
 import com.store.db.ProductDaoRepository;
 import com.store.db.ShippingAddressDaoRepository;
 import com.store.health.AppHealthCheck;
+import com.store.resource.CartEntityResource;
 import com.store.resource.CustomerEntityResource;
 import com.store.resource.OrderDetailEntityResource;
 import com.store.resource.OrderEntityResource;
@@ -74,12 +76,16 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
         new ProductDaoRepository(hibernate.getSessionFactory());
     OrderDaoRepository orderDaoRepository =
         new OrderDaoRepository(hibernate.getSessionFactory());
+    CartDaoRepository cartDaoRepository =
+        new CartDaoRepository(hibernate.getSessionFactory());
+
 
     environment.jersey().register(new CustomerEntityResource(customerDaoRepository));
     environment.jersey().register(new ShippingAddressEntityResource(shippingAddressDaoRepository));
     environment.jersey().register(new OrderDetailEntityResource(orderDetailDaoRepository));
     environment.jersey().register(new ProductEntityResource(productDaoRepository));
     environment.jersey().register(new OrderEntityResource(orderDaoRepository));
+    environment.jersey().register(new CartEntityResource(cartDaoRepository));
     environment.healthChecks().register("template", healthCheck);
 
   }
