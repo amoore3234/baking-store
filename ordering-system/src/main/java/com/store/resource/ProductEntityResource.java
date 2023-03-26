@@ -80,9 +80,15 @@ public class ProductEntityResource {
   @PUT
   @UnitOfWork
   @Path("{id}")
-  public Response updateProduct(@PathParam("id") long id) {
+  public Response updateProduct(@PathParam("id") long id, ProductEntity updateProduct) {
 
-    ProductEntity updateProduct = productDaoRepository.getById(id).get();
+    ProductEntity getProduct = productDaoRepository.getById(id).get();
+    getProduct.setProductName(updateProduct.getProductName());
+    getProduct.setProductType(updateProduct.getProductType());
+    getProduct.setProductPrice(updateProduct.getProductPrice());
+    getProduct.setProductDescription(updateProduct.getProductDescription());
+    getProduct.setProductQuantity(updateProduct.getProductQuantity());
+
     return Response
           .ok(updateProduct)
           .build();
