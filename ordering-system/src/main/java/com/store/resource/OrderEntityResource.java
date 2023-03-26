@@ -79,9 +79,11 @@ public class OrderEntityResource {
   @PUT
   @UnitOfWork
   @Path("{id}")
-  public Response updateOrder(@PathParam("id") long id) {
+  public Response updateOrder(@PathParam("id") long id, OrderEntity updateOrder) {
 
-    OrderEntity updateOrder = orderDaoRepository.getById(id).get();
+    OrderEntity getOrder = orderDaoRepository.getById(id).get();
+    getOrder.setOrderTotal(updateOrder.getOrderTotal());
+
     return Response
           .ok(updateOrder)
           .build();
