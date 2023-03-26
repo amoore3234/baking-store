@@ -81,9 +81,20 @@ public class ShippingAddressEntityResource {
   @PUT
   @UnitOfWork
   @Path("{id}")
-  public Response updateShippingAddress(@PathParam("id") long id) {
+  public Response updateShippingAddress(@PathParam("id") long id,
+      ShippingAddressEntity updateShippingAddress) {
 
-    ShippingAddressEntity updateShippingAddress = shippingAddressDaoRepository.getById(id).get();
+    ShippingAddressEntity getShippingAddress = shippingAddressDaoRepository.getById(id).get();
+    getShippingAddress.setShippingAddressName(updateShippingAddress.getShippingAddressName());
+    getShippingAddress.setShippingAddressOne(updateShippingAddress.getShippingAddressOne());
+    getShippingAddress.setShippingAddressTwo(updateShippingAddress.getShippingAddressTwo());
+    getShippingAddress.setShippingAddressCity(updateShippingAddress.getShippingAddressCity());
+    getShippingAddress.setShippingAddressState(updateShippingAddress.getShippingAddressState());
+    getShippingAddress.setShippingAddressZipCode(updateShippingAddress.getShippingAddressZipCode());
+    getShippingAddress.setShippingAddressEmail(updateShippingAddress.getShippingAddressEmail());
+    getShippingAddress.setShippingAddressPhoneNumber(updateShippingAddress
+        .getShippingAddressPhoneNumber());
+
     return Response
           .ok(updateShippingAddress)
           .build();
