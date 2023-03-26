@@ -1,5 +1,6 @@
 package com.store.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,6 +21,7 @@ public class OrderEntity implements Serializable {
 
   @Id
   @Nullable
+  @JsonProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "order_id", nullable = false, unique = true)
   private long id;
@@ -37,10 +39,12 @@ public class OrderEntity implements Serializable {
   private ProductEntity product;
 
   @Nullable
+  @JsonProperty
   @Column(name = "order_date")
   private OffsetDateTime orderDate = OffsetDateTime.now();
 
   @Nullable
+  @JsonProperty
   @Column(name = "order_total")
   private double orderTotal;
 

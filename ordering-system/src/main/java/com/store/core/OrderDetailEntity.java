@@ -1,6 +1,7 @@
 package com.store.core;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
@@ -24,6 +25,7 @@ public class OrderDetailEntity implements Serializable {
 
   @Id
   @Nullable
+  @JsonProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "order_detail_id", nullable = false, unique = true)
   private long id;
@@ -41,14 +43,17 @@ public class OrderDetailEntity implements Serializable {
   private ShippingAddressEntity shippingAddress;
 
   @Nullable
+  @JsonProperty
   @Column(name = "payment_type")
   private String paymentType;
 
   @Nullable
+  @JsonProperty
   @Column(name = "order_detail_total")
   private int orderDetailTotal;
 
   @Nullable
+  @JsonProperty
   @OneToMany(mappedBy = "orderDetail")
   private List<OrderEntity> orders;
 
