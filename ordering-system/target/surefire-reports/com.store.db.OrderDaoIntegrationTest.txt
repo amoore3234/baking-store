@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.OrderDaoIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.874 s - in com.store.db.OrderDaoIntegrationTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.408 s - in com.store.db.OrderDaoIntegrationTest

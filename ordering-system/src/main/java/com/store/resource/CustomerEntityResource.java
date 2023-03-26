@@ -79,11 +79,22 @@ public class CustomerEntityResource {
   @PUT
   @UnitOfWork
   @Path("{id}")
-  public Response updateCustomer(@PathParam("id") long id) {
+  public Response updateCustomer(@PathParam("id") long id, CustomerEntity updateCustomer) {
 
-    CustomerEntity updateCustomer = customerDaoRepository.getById(id).get();
+    CustomerEntity getCustomer = customerDaoRepository.getById(id).get();
+
+    getCustomer.setCustomerFirstName(updateCustomer.getCustomerFirstName());
+    getCustomer.setCustomerLastName(updateCustomer.getCustomerLastName());
+    getCustomer.setCustomerAddressOne(updateCustomer.getCustomerAddressOne());
+    getCustomer.setCustomerAddressTwo(updateCustomer.getCustomerAddressTwo());
+    getCustomer.setCustomerCity(updateCustomer.getCustomerCity());
+    getCustomer.setCustomerState(updateCustomer.getCustomerState());
+    getCustomer.setCustomerZipCode(updateCustomer.getCustomerZipCode());
+    getCustomer.setCustomerEmail(updateCustomer.getCustomerEmail());
+    getCustomer.setCustomerPhoneNumber(updateCustomer.getCustomerPhoneNumber());
+
     return Response
-          .ok(updateCustomer)
+          .ok(getCustomer)
           .build();
   }
 
