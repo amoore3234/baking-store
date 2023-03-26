@@ -1,5 +1,7 @@
 package com.store.core;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,6 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 @Table(name = "customer_carts")
 public class CustomerCartEntity {
 
@@ -41,6 +44,10 @@ public class CustomerCartEntity {
   @Nullable
   public long getId() {
     return id;
+  }
+
+  public void setId(@Nullable long id) {
+    this.id = id;
   }
 
   @Nullable

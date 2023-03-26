@@ -1,0 +1,26 @@
+{
+  "customer": {
+    "id":1,
+    "customerFirstName": "Mary",
+    "customerLastName": "Mack",
+    "customerAddressOne": "3245 Baldwin",
+    "customerAddressTwo": "St",
+    "customerCity": "Pomona",
+    "customerState": "CA",
+    "customerZipCode": "91123",
+    "customerPhoneNumber": "9097738978",
+    "customerEmail": "mack@gmail.com"
+  },
+  "cart": {
+    "id": 1,
+    "product": {
+      "id": 1,
+      "productName": "Cupcake cups",
+      "productType": "Cakes",
+      "productPrice": 5.95,
+      "productDescription": "Made out of baking sheets",
+      "productQuantity": 100
+    },
+    "cartQuantity": 1
+  }
+}

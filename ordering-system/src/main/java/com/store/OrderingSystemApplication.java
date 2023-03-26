@@ -8,6 +8,7 @@ import com.store.core.OrderEntity;
 import com.store.core.ProductEntity;
 import com.store.core.ShippingAddressEntity;
 import com.store.db.CartDaoRepository;
+import com.store.db.CustomerCartDaoRepository;
 import com.store.db.CustomerDaoRepository;
 import com.store.db.OrderDaoRepository;
 import com.store.db.OrderDetailDaoRepository;
@@ -15,6 +16,7 @@ import com.store.db.ProductDaoRepository;
 import com.store.db.ShippingAddressDaoRepository;
 import com.store.health.AppHealthCheck;
 import com.store.resource.CartEntityResource;
+import com.store.resource.CustomerCartEntityResource;
 import com.store.resource.CustomerEntityResource;
 import com.store.resource.OrderDetailEntityResource;
 import com.store.resource.OrderEntityResource;
@@ -78,7 +80,8 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
         new OrderDaoRepository(hibernate.getSessionFactory());
     CartDaoRepository cartDaoRepository =
         new CartDaoRepository(hibernate.getSessionFactory());
-
+    CustomerCartDaoRepository customerCartDaoRepository =
+        new CustomerCartDaoRepository(hibernate.getSessionFactory());
 
     environment.jersey().register(new CustomerEntityResource(customerDaoRepository));
     environment.jersey().register(new ShippingAddressEntityResource(shippingAddressDaoRepository));
@@ -86,6 +89,7 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
     environment.jersey().register(new ProductEntityResource(productDaoRepository));
     environment.jersey().register(new OrderEntityResource(orderDaoRepository));
     environment.jersey().register(new CartEntityResource(cartDaoRepository));
+    environment.jersey().register(new CustomerCartEntityResource(customerCartDaoRepository));
     environment.healthChecks().register("template", healthCheck);
 
   }

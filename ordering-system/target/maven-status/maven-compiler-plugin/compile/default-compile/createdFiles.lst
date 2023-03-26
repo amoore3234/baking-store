@@ -11,6 +11,7 @@ com/store/db/CustomerDaoRepository.class
 com/store/core/CustomerCartEntity.class
 com/store/OrderingSystemConfiguration.class
 com/store/OrderingSystemApplication.class
+com/store/resource/CustomerCartEntityResource.class
 com/store/resource/ProductEntityResource.class
 com/store/db/AbstractDaoRepository.class
 com/store/db/OrderDetailDaoRepository.class

@@ -1,3 +1,4 @@
+com/store/api/CustomerCartJsonTest.class
 com/store/db/OrderDetailDaoIntegrationTest.class
 com/store/resource/OrderDetailEntityResourceTest.class
 com/store/db/CartDaoIntegrationTest.class
@@ -7,6 +8,7 @@ com/store/api/CartJsonTest.class
 com/store/resource/CartEntityResourceTest.class
 com/store/resource/OrderEntityResourceTest.class
 com/store/db/AbstractDaoRepositoryIntegrationTest.class
+com/store/resource/CustomerCartResourceTest.class
 com/store/db/CustomerCartDaoIntegrationTest.class
 com/store/db/CustomerDaoIntegrationTest.class
 com/store/db/EntityUtil.class

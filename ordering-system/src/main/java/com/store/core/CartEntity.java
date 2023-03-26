@@ -9,9 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -36,6 +38,11 @@ public class CartEntity implements Serializable {
   @JsonProperty
   @Column(name = "cart_quantity")
   private int cartQuantity;
+
+  @Nullable
+  @JsonProperty
+  @OneToMany(mappedBy = "cart")
+  private List<CustomerCartEntity> carts;
 
   public CartEntity() {
   }
@@ -67,9 +74,18 @@ public class CartEntity implements Serializable {
     this.cartQuantity = cartQuantity;
   }
 
+  @Nullable
+  public List<CustomerCartEntity> getCarts() {
+    return carts;
+  }
+
+  public void setCarts(@Nullable List<CustomerCartEntity> carts) {
+    this.carts = carts;
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(id, product, cartQuantity);
+    return Objects.hash(id, product, cartQuantity, carts);
   }
 
   @Override
@@ -82,12 +98,13 @@ public class CartEntity implements Serializable {
     }
     CartEntity other = (CartEntity) obj;
     return id == other.id && Objects.equals(product, other.product)
-      && cartQuantity == other.cartQuantity;
+      && cartQuantity == other.cartQuantity && Objects.equals(carts, other.carts);
   }
 
   @Override
   public String toString() {
-    return "CartEntity [id=" + id + ", product=" + product + ", cartQuantity=" + cartQuantity + "]";
+    return "CartEntity [id=" + id + ", product=" + product + ", cartQuantity="
+      + cartQuantity + ", carts=" + carts + "]";
   }
 
 }
