@@ -79,9 +79,12 @@ public class OrderDetailEntityResource {
   @PUT
   @UnitOfWork
   @Path("{id}")
-  public Response updateOrderDetail(@PathParam("id") long id) {
+  public Response updateOrderDetail(@PathParam("id") long id, OrderDetailEntity updateOrderDetail) {
 
-    OrderDetailEntity updateOrderDetail = orderDetailDaoRepository.getById(id).get();
+    OrderDetailEntity getOrderDetail = orderDetailDaoRepository.getById(id).get();
+    getOrderDetail.setPaymentType(updateOrderDetail.getPaymentType());
+    getOrderDetail.setOrderDetailTotal(updateOrderDetail.getOrderDetailTotal());
+
     return Response
           .ok(updateOrderDetail)
           .build();
