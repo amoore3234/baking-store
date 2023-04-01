@@ -2,6 +2,7 @@ package com.store.resource;
 
 import com.store.core.OrderDetailEntity;
 import com.store.db.OrderDetailDaoRepository;
+import com.store.exception.DataNotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -49,7 +50,10 @@ public class OrderDetailEntityResource {
   @Path("/{id}")
   public Response getById(@PathParam("id") long id) {
 
-    OrderDetailEntity orderDetailEntity = orderDetailDaoRepository.getById(id).get();
+    OrderDetailEntity orderDetailEntity = orderDetailDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Order detail with id " + id + " does not exist");
+      });
     return Response
           .ok(orderDetailEntity)
           .build();
@@ -81,7 +85,10 @@ public class OrderDetailEntityResource {
   @Path("{id}")
   public Response updateOrderDetail(@PathParam("id") long id, OrderDetailEntity updateOrderDetail) {
 
-    OrderDetailEntity getOrderDetail = orderDetailDaoRepository.getById(id).get();
+    OrderDetailEntity getOrderDetail = orderDetailDaoRepository.getById(id).orElseThrow(
+        () -> {
+          return new DataNotFoundException("Order detail with id " + id + " does not exist");
+      });
     getOrderDetail.setPaymentType(updateOrderDetail.getPaymentType());
     getOrderDetail.setOrderDetailTotal(updateOrderDetail.getOrderDetailTotal());
 

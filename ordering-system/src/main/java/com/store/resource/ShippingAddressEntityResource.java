@@ -2,6 +2,7 @@ package com.store.resource;
 
 import com.store.core.ShippingAddressEntity;
 import com.store.db.ShippingAddressDaoRepository;
+import com.store.exception.DataNotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -49,7 +50,10 @@ public class ShippingAddressEntityResource {
   @Path("/{id}")
   public Response getById(@PathParam("id") long id) {
 
-    ShippingAddressEntity shippingAddressEntity = shippingAddressDaoRepository.getById(id).get();
+    ShippingAddressEntity shippingAddressEntity = shippingAddressDaoRepository.getById(id)
+        .orElseThrow(() -> {
+          return new DataNotFoundException("Shipping address with id " + id + " does not exist");
+        });
     return Response
           .ok(shippingAddressEntity)
           .build();
@@ -84,7 +88,10 @@ public class ShippingAddressEntityResource {
   public Response updateShippingAddress(@PathParam("id") long id,
       ShippingAddressEntity updateShippingAddress) {
 
-    ShippingAddressEntity getShippingAddress = shippingAddressDaoRepository.getById(id).get();
+    ShippingAddressEntity getShippingAddress = shippingAddressDaoRepository.getById(id)
+        .orElseThrow(() -> {
+          return new DataNotFoundException("Shipping address with id " + id + " does not exist");
+        });
     getShippingAddress.setShippingAddressName(updateShippingAddress.getShippingAddressName());
     getShippingAddress.setShippingAddressOne(updateShippingAddress.getShippingAddressOne());
     getShippingAddress.setShippingAddressTwo(updateShippingAddress.getShippingAddressTwo());

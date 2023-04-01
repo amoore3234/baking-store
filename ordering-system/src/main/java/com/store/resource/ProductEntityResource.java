@@ -2,6 +2,7 @@ package com.store.resource;
 
 import com.store.core.ProductEntity;
 import com.store.db.ProductDaoRepository;
+import com.store.exception.DataNotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -49,7 +50,10 @@ public class ProductEntityResource {
   @Path("/{id}")
   public Response getById(@PathParam("id") long id) {
 
-    ProductEntity productEntity = productDaoRepository.getById(id).get();
+    ProductEntity productEntity = productDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Product with id " + id + " does not exist");
+      });
     return Response
           .ok(productEntity)
           .build();
@@ -82,7 +86,10 @@ public class ProductEntityResource {
   @Path("{id}")
   public Response updateProduct(@PathParam("id") long id, ProductEntity updateProduct) {
 
-    ProductEntity getProduct = productDaoRepository.getById(id).get();
+    ProductEntity getProduct = productDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Product with id " + id + " does not exist");
+      });
     getProduct.setProductName(updateProduct.getProductName());
     getProduct.setProductType(updateProduct.getProductType());
     getProduct.setProductPrice(updateProduct.getProductPrice());

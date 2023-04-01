@@ -14,6 +14,7 @@ import com.store.db.OrderDaoRepository;
 import com.store.db.OrderDetailDaoRepository;
 import com.store.db.ProductDaoRepository;
 import com.store.db.ShippingAddressDaoRepository;
+import com.store.exception.DataNotFoundExceptionMapper;
 import com.store.health.AppHealthCheck;
 import com.store.resource.CartEntityResource;
 import com.store.resource.CustomerCartEntityResource;
@@ -90,6 +91,7 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
     environment.jersey().register(new OrderEntityResource(orderDaoRepository));
     environment.jersey().register(new CartEntityResource(cartDaoRepository));
     environment.jersey().register(new CustomerCartEntityResource(customerCartDaoRepository));
+    environment.jersey().register(new DataNotFoundExceptionMapper());
     environment.healthChecks().register("template", healthCheck);
 
   }

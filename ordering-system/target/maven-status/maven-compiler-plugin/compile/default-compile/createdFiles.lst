@@ -1,11 +1,14 @@
 com/store/OrderingSystemApplication$2.class
 com/store/resource/CartEntityResource.class
 com/store/resource/CustomerEntityResource.class
+com/store/exception/DataNotFoundException.class
 com/store/core/OrderDetailEntity.class
+com/store/exception/DataNotFoundExceptionMapper.class
 com/store/resource/ShippingAddressEntityResource.class
 com/store/core/CartEntity.class
 com/store/db/ProductDaoRepository.class
 com/store/db/OrderDaoRepository.class
+com/store/exception/ErrorMessage.class
 com/store/core/ProductEntity.class
 com/store/db/CustomerDaoRepository.class
 com/store/core/CustomerCartEntity.class

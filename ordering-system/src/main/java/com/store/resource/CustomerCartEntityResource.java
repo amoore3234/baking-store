@@ -2,6 +2,7 @@ package com.store.resource;
 
 import com.store.core.CustomerCartEntity;
 import com.store.db.CustomerCartDaoRepository;
+import com.store.exception.DataNotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -50,7 +51,10 @@ public class CustomerCartEntityResource {
   @Path("/{id}")
   public Response getById(@PathParam("id") long id) {
 
-    CustomerCartEntity customerCartEntity = customerCartDaoRepository.getById(id).get();
+    CustomerCartEntity customerCartEntity = customerCartDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Customer's cart with id " + id + " does not exist");
+      });
     return Response
         .ok(customerCartEntity)
         .build();

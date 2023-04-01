@@ -2,6 +2,7 @@ package com.store.resource;
 
 import com.store.core.CustomerEntity;
 import com.store.db.CustomerDaoRepository;
+import com.store.exception.DataNotFoundException;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -49,7 +50,11 @@ public class CustomerEntityResource {
   @Path("/{id}")
   public Response getById(@PathParam("id") long id) {
 
-    CustomerEntity customerEntity = customerDaoRepository.getById(id).get();
+    CustomerEntity customerEntity = customerDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Customer with id " + id + " does not exist");
+      });
+
     return Response
           .ok(customerEntity)
           .build();
@@ -81,7 +86,10 @@ public class CustomerEntityResource {
   @Path("{id}")
   public Response updateCustomer(@PathParam("id") long id, CustomerEntity updateCustomer) {
 
-    CustomerEntity getCustomer = customerDaoRepository.getById(id).get();
+    CustomerEntity getCustomer = customerDaoRepository.getById(id).orElseThrow(
+        () -> {
+        return new DataNotFoundException("Customer with id " + id + " does not exist");
+      });
 
     getCustomer.setCustomerFirstName(updateCustomer.getCustomerFirstName());
     getCustomer.setCustomerLastName(updateCustomer.getCustomerLastName());

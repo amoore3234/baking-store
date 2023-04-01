@@ -6,8 +6,11 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CartEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/CustomerCartDaoRepository.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/exception/ErrorMessage.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/exception/DataNotFoundException.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/OrderingSystemApplication.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/ProductEntityResource.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/exception/DataNotFoundExceptionMapper.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/AbstractDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/health/AppHealthCheck.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderDetailEntity.java
