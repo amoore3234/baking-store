@@ -3,6 +3,8 @@ package com.store.resource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.store.core.ProductEntity;
+import com.store.pagination.PageTemplate;
+import com.store.pagination.Pagination;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -16,6 +18,9 @@ import org.mockito.Mockito;
 public class ProductEntityResourceTest extends AbstractResourceTest {
 
   private ProductEntity entity;
+  private PageTemplate pageTemplate;
+  private List<ProductEntity> list;
+  private Pagination<ProductEntity> productPagination;
   private int statusCode;
 
   @BeforeEach
@@ -28,6 +33,14 @@ public class ProductEntityResourceTest extends AbstractResourceTest {
     entity.setProductDescription("test product description");
     entity.setProductPrice(0.00);
     entity.setProductQuantity(1);
+
+    productPagination = new Pagination<>();
+    list = new ArrayList<>();
+    list.add(entity);
+    pageTemplate = new PageTemplate();
+    pageTemplate.setPageNumber(1);
+    pageTemplate.setPageSize(2);
+    productPagination.setList(list);
   }
 
   @AfterEach
@@ -43,6 +56,15 @@ public class ProductEntityResourceTest extends AbstractResourceTest {
     Response response = extension.target("/products/find-all").request().get();
 
     assertThat(response.getLength()).isGreaterThanOrEqualTo(size);
+  }
+
+  @Test
+  void testPagination() {
+    final Pagination<ProductEntity> mockPagination = productDaoRepository.pagination(pageTemplate);
+    Mockito.when(mockPagination).thenReturn(productPagination);
+    Response response = extension.target("/products").queryParam("pageNumber", "1").request().get();
+
+    assertThat(response.getStatus()).isEqualTo(statusCode);
   }
 
   @Test

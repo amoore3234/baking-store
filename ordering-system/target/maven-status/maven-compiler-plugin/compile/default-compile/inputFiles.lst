@@ -23,6 +23,9 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/CartEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderDetailEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/ShippingAddressEntityResource.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/pagination/PageTemplate.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerCartEntity.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/pagination/Pagination.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/OrderDaoRepository.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/pagination/Pages.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerEntity.java

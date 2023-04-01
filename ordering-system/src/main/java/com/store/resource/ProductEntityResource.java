@@ -3,6 +3,7 @@ package com.store.resource;
 import com.store.core.ProductEntity;
 import com.store.db.ProductDaoRepository;
 import com.store.exception.DataNotFoundException;
+import com.store.pagination.PageTemplate;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -11,10 +12,14 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * A resource that includes CRUD and other endpoints for products.
+ */
 @Path("products")
 @Produces(MediaType.APPLICATION_JSON)
 public class ProductEntityResource {
@@ -27,6 +32,7 @@ public class ProductEntityResource {
 
   /**
    * A Response method that fetches all products.
+   *
    * @return a Response that returns a list of products.
    */
   @GET
@@ -41,7 +47,27 @@ public class ProductEntityResource {
   }
 
   /**
+   * A Response method that paginates a list of products.
+   *
+   * @param pageNumber query param for page numbers.
+   * @return a Response that returns a paginated list.
+   */
+  @GET
+  @UnitOfWork
+  public Response pagination(@QueryParam("pageNumber") int pageNumber) {
+    final PageTemplate pageTemplate = new PageTemplate();
+    pageTemplate.setPageNumber(pageNumber);
+    pageTemplate.setPageSize(2);
+
+    final List<ProductEntity> paginate = productDaoRepository.pagination(pageTemplate).getList();
+    return Response
+          .ok(paginate)
+          .build();
+  }
+
+  /**
    * A Response method that retrieves a product by id.
+   *
    * @param id defines a product's id.
    * @return a Response that returns a product object.
    */
@@ -61,6 +87,7 @@ public class ProductEntityResource {
 
   /**
    * A Response method that saves a product.
+   *
    * @param productEntity {@link ProductEntity}
    *      defines the ProductEntity class.
    * @return a Response that returns a product object.
@@ -78,6 +105,7 @@ public class ProductEntityResource {
 
   /**
    * A Response method that updates a product.
+   *
    * @param id defines a product's id.
    * @return a Response that returns a product object.
    */
@@ -103,6 +131,7 @@ public class ProductEntityResource {
 
   /**
    * A Response method that deletes a product.
+   *
    * @param id defines a product's id.
    * @return a Response that returns an empty object.
    */

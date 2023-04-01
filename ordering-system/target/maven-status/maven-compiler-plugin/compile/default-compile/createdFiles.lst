@@ -18,13 +18,16 @@ com/store/resource/CustomerCartEntityResource.class
 com/store/resource/ProductEntityResource.class
 com/store/db/AbstractDaoRepository.class
 com/store/db/OrderDetailDaoRepository.class
+com/store/pagination/Pagination.class
 com/store/OrderingSystemApplication$1.class
 com/store/core/OrderEntity.class
 com/store/core/ShippingAddressEntity.class
 com/store/health/AppHealthCheck.class
 com/store/db/CartDaoRepository.class
+com/store/pagination/PageTemplate.class
 com/store/resource/OrderDetailEntityResource.class
 com/store/db/CustomerCartDaoRepository.class
+com/store/pagination/Pages.class
 com/store/db/ShippingAddressDaoRepository.class
 com/store/resource/OrderEntityResource.class
 com/store/core/CustomerEntity.class

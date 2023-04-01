@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.store.core.OrderDetailEntity;
 import com.store.core.OrderEntity;
 import com.store.core.ProductEntity;
+import com.store.pagination.PageTemplate;
+import com.store.pagination.Pagination;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.Response;
 import java.time.OffsetDateTime;
@@ -20,6 +22,9 @@ import org.mockito.Mockito;
 public class OrderEntityResourceTest extends AbstractResourceTest {
 
   private OrderEntity entity;
+  private PageTemplate pageTemplate;
+  private Pagination<OrderEntity> orderPagination;
+  private List<OrderEntity> list;
   private ProductEntity productEntity;
   private OrderDetailEntity orderDetailIdEntity;
   final OffsetDateTime now = OffsetDateTime.now(ZoneOffset.UTC);
@@ -38,6 +43,14 @@ public class OrderEntityResourceTest extends AbstractResourceTest {
     entity.setOrderTotal(1);
     entity.setProduct(productEntity);
     entity.setOrderDetail(orderDetailIdEntity);
+
+    orderPagination = new Pagination<>();
+    list = new ArrayList<>();
+    list.add(entity);
+    pageTemplate = new PageTemplate();
+    pageTemplate.setPageNumber(1);
+    pageTemplate.setPageSize(2);
+    orderPagination.setList(list);
   }
 
   @AfterEach
@@ -53,6 +66,15 @@ public class OrderEntityResourceTest extends AbstractResourceTest {
     Response response = extension.target("/orders/find-all").request().get();
 
     assertThat(response.getLength()).isGreaterThanOrEqualTo(size);
+  }
+
+  @Test
+  void testPagination() {
+    final Pagination<OrderEntity> mockPagination = orderDaoRepository.pagination(pageTemplate);
+    Mockito.when(mockPagination).thenReturn(orderPagination);
+    Response response = extension.target("/orders").queryParam("pageNumber", "1").request().get();
+
+    assertThat(response.getStatus()).isEqualTo(statusCode);
   }
 
   @Test
@@ -98,7 +120,7 @@ public class OrderEntityResourceTest extends AbstractResourceTest {
     assertThat(response.readEntity(OrderEntity.class).getOrderTotal()).isEqualTo(orderTotal);
     assertThat(response.readEntity(OrderEntity.class).getProduct().getId()).isEqualTo(productId);
     assertThat(response.readEntity(OrderEntity.class).getOrderDetail().getId())
-      .isEqualTo(orderDetailId);
+        .isEqualTo(orderDetailId);
 
   }
 

@@ -3,6 +3,8 @@ package com.store.db;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.store.core.OrderDetailEntity;
+import com.store.pagination.PageTemplate;
+import com.store.pagination.Pages;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,10 +13,16 @@ import org.junit.jupiter.api.Test;
 public class OrderDetailDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
   private OrderDetailDaoRepository orderDetailDaoRepository;
+  private PageTemplate pageTemplate;
+  private final int pageNumber = 1;
+  private final int pageSize = 2;
 
   @BeforeEach
   void setup() {
     orderDetailDaoRepository = new OrderDetailDaoRepository(daoTest.getSessionFactory());
+    pageTemplate = new PageTemplate();
+    pageTemplate.setPageNumber(pageNumber);
+    pageTemplate.setPageSize(pageSize);
   }
 
   @Test
@@ -70,6 +78,27 @@ public class OrderDetailDaoIntegrationTest extends AbstractDaoRepositoryIntegrat
     newOrderDetailEntity.setPaymentType(paymentType);
 
     assertThat(newOrderDetailEntity.getPaymentType()).isEqualTo(paymentType);
+  }
+
+  @Test
+  void testPaginationPages() {
+    final int nextPage = 2;
+    final int prevPage = 1;
+    final int lastPage = 3;
+
+    final Pages pages = orderDetailDaoRepository.pagination(pageTemplate).getPages();
+
+    assertThat(pages.getNextPage()).isEqualTo(nextPage);
+    assertThat(pages.getPrevPage()).isEqualTo(prevPage);
+    assertThat(pages.getLastPage()).isEqualTo(lastPage);
+  }
+
+  @Test
+  void testPaginationList() {
+    final List<OrderDetailEntity> list = orderDetailDaoRepository
+        .pagination(pageTemplate).getList();
+
+    assertThat(pageSize).isEqualTo(list.size());
   }
 
   private long newOrderDetail() {
