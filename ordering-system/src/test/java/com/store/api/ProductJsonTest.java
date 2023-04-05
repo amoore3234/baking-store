@@ -8,10 +8,9 @@ import com.store.core.ProductEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ProductJsonTest {
+class ProductJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
-
   private ProductEntity product;
 
   @BeforeEach
@@ -36,7 +35,7 @@ public class ProductJsonTest {
   @Test
   void deserializesFromJson() throws Exception {
     final String name = "Cupcake cups";
-    final String type= "Cakes";
+    final String type = "Cakes";
     final double price = 5.95;
     final String description = "Made out of baking sheets";
     final int quantity = 100;

@@ -8,10 +8,9 @@ import com.store.core.ShippingAddressEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ShippingAddressJsonTest {
+class ShippingAddressJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
-
   private ShippingAddressEntity shippingAddress;
 
   @BeforeEach

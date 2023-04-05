@@ -9,7 +9,7 @@ import com.store.core.ProductEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CartJsonTest {
+class CartJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
   private CartEntity cart;

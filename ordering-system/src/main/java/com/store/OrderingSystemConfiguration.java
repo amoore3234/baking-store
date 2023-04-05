@@ -3,11 +3,13 @@ package com.store;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.core.Configuration;
 import io.dropwizard.db.DataSourceFactory;
-
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+/**
+ * OrderingSystemConfiguration class that configures database access properties.
+*/
 public class OrderingSystemConfiguration extends Configuration {
 
   @NotEmpty

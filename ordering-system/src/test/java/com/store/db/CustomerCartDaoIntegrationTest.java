@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CustomerCartDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
+class CustomerCartDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
   private CustomerCartDaoRepository customerCartDaoRepository;
 
   @BeforeEach

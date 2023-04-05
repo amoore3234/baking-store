@@ -13,7 +13,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 
 @ExtendWith(DropwizardExtensionsSupport.class)
-public abstract class AbstractResourceTest {
+abstract class AbstractResourceTest {
 
   final CustomerDaoRepository customerDaoRepository =
       Mockito.mock(CustomerDaoRepository.class);

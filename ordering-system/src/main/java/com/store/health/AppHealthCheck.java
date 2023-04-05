@@ -2,6 +2,9 @@ package com.store.health;
 
 import com.codahale.metrics.health.HealthCheck;
 
+/**
+ * An application health check.
+ */
 public class AppHealthCheck extends HealthCheck {
   private final String template;
 

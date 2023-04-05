@@ -2,6 +2,9 @@ package com.store.pagination;
 
 import java.util.Objects;
 
+/**
+ * A class that holds a page number and page size.
+ */
 public class PageTemplate {
 
   private int pageNumber;

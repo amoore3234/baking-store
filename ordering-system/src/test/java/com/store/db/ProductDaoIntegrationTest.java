@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ProductDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
+class ProductDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
   private ProductDaoRepository productDaoRepository;
   private PageTemplate pageTemplate;

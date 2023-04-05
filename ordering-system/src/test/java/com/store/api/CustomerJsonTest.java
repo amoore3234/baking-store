@@ -8,10 +8,9 @@ import com.store.core.CustomerEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CustomerJsonTest {
+class CustomerJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
-
   private CustomerEntity customer;
 
   @BeforeEach

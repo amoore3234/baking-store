@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class CustomerEntityResourceTest extends AbstractResourceTest {
+class CustomerEntityResourceTest extends AbstractResourceTest {
 
   private CustomerEntity entity;
   private int statusCode;
@@ -107,23 +107,23 @@ public class CustomerEntityResourceTest extends AbstractResourceTest {
     response.bufferEntity();
 
     assertThat(response.readEntity(CustomerEntity.class).getCustomerFirstName())
-      .isEqualTo(firstName);
+        .isEqualTo(firstName);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerLastName())
-      .isEqualTo(lastName);
+        .isEqualTo(lastName);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressOne())
-      .isEqualTo(addressOne);
+        .isEqualTo(addressOne);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerAddressTwo())
-      .isEqualTo(addressTwo);
+        .isEqualTo(addressTwo);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerCity())
-      .isEqualTo(city);
+        .isEqualTo(city);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerState())
-      .isEqualTo(state);
+        .isEqualTo(state);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerZipCode())
-      .isEqualTo(zipCode);
+        .isEqualTo(zipCode);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerPhoneNumber())
-      .isEqualTo(phoneNumber);
+        .isEqualTo(phoneNumber);
     assertThat(response.readEntity(CustomerEntity.class).getCustomerEmail())
-      .isEqualTo(email);
+        .isEqualTo(email);
   }
 
   @Test

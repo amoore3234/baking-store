@@ -2,6 +2,9 @@ package com.store.exception;
 
 import java.util.Objects;
 
+/**
+ * An ErrorMessage class that implements a custom description for the custom exception class.
+ */
 public class ErrorMessage {
 
   private int error;

@@ -15,7 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class ProductEntityResourceTest extends AbstractResourceTest {
+class ProductEntityResourceTest extends AbstractResourceTest {
 
   private ProductEntity entity;
   private PageTemplate pageTemplate;
@@ -109,15 +109,15 @@ public class ProductEntityResourceTest extends AbstractResourceTest {
     response.bufferEntity();
 
     assertThat(response.readEntity(ProductEntity.class).getProductName())
-      .isEqualTo(productName);
+        .isEqualTo(productName);
     assertThat(response.readEntity(ProductEntity.class).getProductType())
-      .isEqualTo(productType);
+        .isEqualTo(productType);
     assertThat(response.readEntity(ProductEntity.class).getProductDescription())
-      .isEqualTo(productDesc);
+        .isEqualTo(productDesc);
     assertThat(response.readEntity(ProductEntity.class).getProductPrice())
-      .isEqualTo(productPrice);
-    assertThat(response.readEntity(ProductEntity.class).getProductQuantity()
-      ).isEqualTo(productQuantity);
+        .isEqualTo(productPrice);
+    assertThat(response.readEntity(ProductEntity.class).getProductQuantity())
+        .isEqualTo(productQuantity);
 
   }
 

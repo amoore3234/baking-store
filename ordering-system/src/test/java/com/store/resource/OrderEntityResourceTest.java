@@ -19,7 +19,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class OrderEntityResourceTest extends AbstractResourceTest {
+class OrderEntityResourceTest extends AbstractResourceTest {
 
   private OrderEntity entity;
   private PageTemplate pageTemplate;

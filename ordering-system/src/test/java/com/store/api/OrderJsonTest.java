@@ -15,10 +15,9 @@ import java.time.ZoneOffset;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class OrderJsonTest {
+class OrderJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
-
   private OrderEntity order;
   private OrderDetailEntity orderDetail;
   private CustomerEntity customer;
@@ -85,7 +84,9 @@ public class OrderJsonTest {
   void deserializesFromJson() throws Exception {
     final long productId = 1L;
     final long orderDetailId = 1L;
-    final OffsetDateTime orderDate = LocalDateTime.of(2020, 07, 21, 10, 12, 23, 0).atOffset(ZoneOffset.UTC);
+    final OffsetDateTime orderDate =
+        LocalDateTime.of(2020, 07, 21, 10, 12, 23, 0)
+          .atOffset(ZoneOffset.UTC);
     final double orderTotal = 5.95;
 
     final OrderEntity orderJson = MAPPER.readValue(getClass()

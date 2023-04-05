@@ -10,10 +10,9 @@ import com.store.core.ShippingAddressEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class OrderDetailJsonTest {
+class OrderDetailJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
-
   private OrderDetailEntity orderDetail;
   private CustomerEntity customer;
   private ShippingAddressEntity shippingAddress;

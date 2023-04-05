@@ -15,6 +15,9 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * A resource that includes CRUD and other endpoints for customers.
+ */
 @Path("/customers")
 @Produces(MediaType.APPLICATION_JSON)
 public class CustomerEntityResource {
@@ -27,6 +30,7 @@ public class CustomerEntityResource {
 
   /**
    * A Response that fetches all customers.
+   *
    * @return a Response that returns a list of customers.
    */
   @GET
@@ -42,6 +46,7 @@ public class CustomerEntityResource {
 
   /**
    * A Response that retrieves a customer by id.
+   *
    * @param id defines a customer's id.
    * @return a Response that returns a customer object.
    */
@@ -62,6 +67,7 @@ public class CustomerEntityResource {
 
   /**
    * A Response method that saves a customer.
+   *
    * @param customerEntity {@link CustomerEntity} defines the CustomerEntity class.
    * @return a Response that returns a customer object.
    */
@@ -78,6 +84,7 @@ public class CustomerEntityResource {
 
   /**
    * A Response method that updates a customer.
+   *
    * @param id defines a customer's id.
    * @return a Response that returns a customer object.
    */
@@ -108,6 +115,7 @@ public class CustomerEntityResource {
 
   /**
    * A Response method that deletes a customer.
+   *
    * @param id defines a customer's id.
    * @return a Response that returns an empty object.
    */

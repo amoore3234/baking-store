@@ -6,6 +6,9 @@ import jakarta.ws.rs.core.Response.Status;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
+/**
+ * A mapper for the application to recognize the custom exception.
+ */
 @Provider
 public class DataNotFoundExceptionMapper implements ExceptionMapper<DataNotFoundException> {
 

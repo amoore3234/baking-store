@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.store.core.CustomerEntity;
 import com.store.core.OrderDetailEntity;
 import com.store.core.ShippingAddressEntity;
+import com.store.pagination.PageTemplate;
+import com.store.pagination.Pagination;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -15,10 +17,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class OrderDetailEntityResourceTest extends AbstractResourceTest {
+class OrderDetailEntityResourceTest extends AbstractResourceTest {
 
   private OrderDetailEntity entity;
   private CustomerEntity customerEntity;
+  private PageTemplate pageTemplate;
+  private Pagination<OrderDetailEntity> orderPagination;
+  private List<OrderDetailEntity> list;
   private ShippingAddressEntity shippingAddressEntity;
   private int statusCode;
 
@@ -35,6 +40,14 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
     entity.setShippingAddress(shippingAddressEntity);
     entity.setPaymentType("test payment type");
     entity.setOrderDetailTotal(1);
+
+    orderPagination = new Pagination<>();
+    list = new ArrayList<>();
+    list.add(entity);
+    pageTemplate = new PageTemplate();
+    pageTemplate.setPageNumber(1);
+    pageTemplate.setPageSize(2);
+    orderPagination.setList(list);
   }
 
   @AfterEach
@@ -53,9 +66,20 @@ public class OrderDetailEntityResourceTest extends AbstractResourceTest {
   }
 
   @Test
+  void testPagination() {
+    final Pagination<OrderDetailEntity> mockPagination =
+        orderDetailDaoRepository.pagination(pageTemplate);
+    Mockito.when(mockPagination).thenReturn(orderPagination);
+    Response response = extension.target("/order-details")
+        .queryParam("pageNumber", "1").request().get();
+
+    assertThat(response.getStatus()).isEqualTo(statusCode);
+  }
+
+  @Test
   void testSaveOrderDetail() {
     Mockito.when(orderDetailDaoRepository.save(Mockito.any(OrderDetailEntity.class)))
-      .thenReturn(entity);
+        .thenReturn(entity);
     Response response = extension.target("/order-details/add-order-detail")
         .request().post(Entity.json(entity));
 

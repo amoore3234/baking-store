@@ -2,6 +2,9 @@ package com.store.pagination;
 
 import java.util.Objects;
 
+/**
+ * A class that stores page data for a paginated list.
+ */
 public class Pages {
 
   private int firstPage;
