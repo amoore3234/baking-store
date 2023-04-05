@@ -15,7 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class CustomerCartResourceTest extends AbstractResourceTest {
+class CustomerCartResourceTest extends AbstractResourceTest {
 
   private CustomerCartEntity entity;
   private CustomerEntity customerEntity;
@@ -53,7 +53,7 @@ public class CustomerCartResourceTest extends AbstractResourceTest {
   @Test
   void testSaveCart() {
     Mockito.when(customerCartDaoRepository.save(Mockito.any(CustomerCartEntity.class)))
-      .thenReturn(entity);
+        .thenReturn(entity);
     Response response = extension.target("/customer-carts/add-customer-cart")
         .request().post(Entity.json(entity));
 

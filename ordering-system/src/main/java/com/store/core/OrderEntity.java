@@ -17,6 +17,9 @@ import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
+/**
+ * Order class modeled as an entity class.
+ */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 @Table(name = "orders")

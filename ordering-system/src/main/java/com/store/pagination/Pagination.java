@@ -3,6 +3,9 @@ package com.store.pagination;
 import jakarta.annotation.Nullable;
 import java.util.List;
 
+/**
+ * A class that performs pagination functionality.
+ */
 public class Pagination<T> {
 
   @Nullable

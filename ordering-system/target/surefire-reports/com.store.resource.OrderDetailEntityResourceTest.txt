@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.store.resource.OrderDetailEntityResourceTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.284 s - in com.store.resource.OrderDetailEntityResourceTest
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.628 s <<< FAILURE! - in com.store.resource.OrderDetailEntityResourceTest
+testPagination  Time elapsed: 0.536 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200
+ but was: 404
+	at com.store.resource.OrderDetailEntityResourceTest.testPagination(OrderDetailEntityResourceTest.java:76)
+

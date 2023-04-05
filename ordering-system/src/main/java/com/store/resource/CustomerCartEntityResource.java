@@ -14,6 +14,9 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * A resource that includes CRUD or other endpoints for customer carts.
+ */
 @Path("/customer-carts")
 @Produces(MediaType.APPLICATION_JSON)
 public class CustomerCartEntityResource {

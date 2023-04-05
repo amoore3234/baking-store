@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.Optional;
 import org.hibernate.SessionFactory;
 
+/**
+ * Abstract repository class that holds CRUD and Dao methods.
+ */
 public abstract class AbstractDaoRepository<T> extends AbstractDAO<T> {
 
   protected AbstractDaoRepository(SessionFactory sessionFactory) {
@@ -38,6 +41,12 @@ public abstract class AbstractDaoRepository<T> extends AbstractDAO<T> {
     currentSession().delete(entity);
   }
 
+  /**
+   * Method that performs paginated functionality.
+   *
+   * @param pageTemplate defines an object that includes a page number and page size.
+   * @return returns a new pagination object that stores a paginated list and pages.
+   */
   public Pagination<T> pagination(PageTemplate pageTemplate) {
     final CriteriaQuery<T> select = createSelect();
     final List<T> resultList = currentSession().createQuery(select).list();
@@ -60,13 +69,14 @@ public abstract class AbstractDaoRepository<T> extends AbstractDAO<T> {
 
     Pages pages = new Pages();
 
-    if(totalCount < pageSize) {
+    if (totalCount < pageSize) {
       pageSize = totalCount;
     }
     final int lastPage = totalCount / pageSize;
     pages.setFirstPage(1);
     pages.setLastPage(totalCount % pageSize == 0 ? lastPage : lastPage + 1);
-    pages.setNextPage(currentPageNumber < pages.getLastPage() ? currentPageNumber + 1 : pages.getLastPage());
+    pages.setNextPage(currentPageNumber < pages.getLastPage()
+        ? currentPageNumber + 1 : pages.getLastPage());
     pages.setPrevPage(currentPageNumber - 1 <= 0 ? 1 : currentPageNumber - 1);
     return pages;
   }

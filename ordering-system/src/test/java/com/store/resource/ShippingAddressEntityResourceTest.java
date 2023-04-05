@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class ShippingAddressEntityResourceTest extends AbstractResourceTest {
+class ShippingAddressEntityResourceTest extends AbstractResourceTest {
 
   private ShippingAddressEntity entity;
   private int statusCode;
@@ -51,7 +51,7 @@ public class ShippingAddressEntityResourceTest extends AbstractResourceTest {
   @Test
   void testSaveShippingAddress() {
     Mockito.when(shippingAddressDaoRepository.save(Mockito.any(ShippingAddressEntity.class)))
-      .thenReturn(entity);
+        .thenReturn(entity);
     Response response = extension.target("/shipping-address/add-shipping-address")
         .request().post(Entity.json(entity));
 

@@ -11,7 +11,7 @@ import com.store.core.ProductEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CustomerCartJsonTest {
+class CustomerCartJsonTest {
 
   private static final ObjectMapper MAPPER = newObjectMapper();
   private CartEntity cart;

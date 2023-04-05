@@ -18,6 +18,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Carts class modeled as an entity class.
+ */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 @Table(name = "carts")

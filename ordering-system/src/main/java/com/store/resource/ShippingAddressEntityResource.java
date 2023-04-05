@@ -15,6 +15,9 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * A resource that includes CRUD and other endpoints for shipping addresses.
+ */
 @Path("/shipping-address")
 @Produces(MediaType.APPLICATION_JSON)
 public class ShippingAddressEntityResource {
@@ -27,6 +30,7 @@ public class ShippingAddressEntityResource {
 
   /**
   * A Response method to fetch all shipping addresses.
+
   * @return a Response that returns a list of shipping addresses.
   */
   @GET
@@ -42,6 +46,7 @@ public class ShippingAddressEntityResource {
 
   /**
    * A Response method that retrieves a shipping address by its id.
+   *
    * @param id defines a shipping address's id.
    * @return a Response that returns a shipping address object.
    */
@@ -61,6 +66,7 @@ public class ShippingAddressEntityResource {
 
   /**
    * A Response method that saves a shipping address.
+   *
    * @param shippingAddressEntity {@link ShippingAddressEntity}
    *      defines the ShippingAddressEntity class.
    * @return a Response that returns a shipping address object.
@@ -79,6 +85,7 @@ public class ShippingAddressEntityResource {
 
   /**
    * A Response method that updates a shipping address.
+   *
    * @param id defines a shipping address's id.
    * @return a Response that returns a shipping address object.
    */
@@ -109,6 +116,7 @@ public class ShippingAddressEntityResource {
 
   /**
    * A Response method that deletes a shipping address.
+   *
    * @param id defines a shipping address's id.
    * @return a Response that returns nothing.
    */

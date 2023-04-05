@@ -30,6 +30,9 @@ import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.migrations.MigrationsBundle;
 
+/**
+ * OrderSystemApplication class that runs the service.
+ */
 public class OrderingSystemApplication extends Application<OrderingSystemConfiguration> {
 
   public static void main(final String[] args) throws Exception {
@@ -47,11 +50,11 @@ public class OrderingSystemApplication extends Application<OrderingSystemConfigu
           OrderDetailEntity.class, ProductEntity.class, CartEntity.class,
           CustomerCartEntity.class) {
 
-      @Override
-      public DataSourceFactory getDataSourceFactory(OrderingSystemConfiguration configuration) {
-          return configuration.getDataSourceFactory();
-      }
-  };
+        @Override
+        public DataSourceFactory getDataSourceFactory(OrderingSystemConfiguration configuration) {
+            return configuration.getDataSourceFactory();
+        }
+      };
 
   @Override
   public void initialize(final Bootstrap<OrderingSystemConfiguration> bootstrap) {

@@ -11,15 +11,13 @@ import io.dropwizard.testing.junit5.DAOTestExtension;
 import io.dropwizard.testing.junit5.DropwizardExtensionsSupport;
 import io.zonky.test.db.postgres.embedded.LiquibasePreparer;
 import io.zonky.test.db.postgres.embedded.PreparedDbProvider;
-
 import java.sql.SQLException;
-
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.dialect.PostgreSQL10Dialect;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(DropwizardExtensionsSupport.class)
-public class AbstractDaoRepositoryIntegrationTest {
+class AbstractDaoRepositoryIntegrationTest {
 
   private final PreparedDbProvider preparedDbProvider = PreparedDbProvider
       .forPreparer(LiquibasePreparer.forClasspathLocation("migrations.xml"));
