@@ -3,7 +3,9 @@ package com.store.resource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.store.core.ProductEntity;
+import com.store.pagination.Filter;
 import com.store.pagination.PageTemplate;
+import com.store.pagination.Pages;
 import com.store.pagination.Pagination;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.Response;
@@ -19,6 +21,8 @@ class ProductEntityResourceTest extends AbstractResourceTest {
 
   private ProductEntity entity;
   private PageTemplate pageTemplate;
+  private Filter filter;
+  private Pages pages;
   private List<ProductEntity> list;
   private Pagination<ProductEntity> productPagination;
   private int statusCode;
@@ -41,6 +45,16 @@ class ProductEntityResourceTest extends AbstractResourceTest {
     pageTemplate.setPageNumber(1);
     pageTemplate.setPageSize(2);
     productPagination.setList(list);
+
+    filter = new Filter();
+    filter.setCakeFilter("Cakes");
+
+    pages = new Pages();
+    pages.setFirstPage(1);
+    pages.setNextPage(2);
+    pages.setPrevPage(1);
+    pages.setLastPage(6);
+    productPagination.setPages(pages);
   }
 
   @AfterEach
@@ -59,10 +73,25 @@ class ProductEntityResourceTest extends AbstractResourceTest {
   }
 
   @Test
-  void testPagination() {
-    final Pagination<ProductEntity> mockPagination = productDaoRepository.pagination(pageTemplate);
+  void testPaginationAndFilter() {
+    final Pagination<ProductEntity> mockPagination = productDaoRepository
+        .paginator(filter, pageTemplate);
     Mockito.when(mockPagination).thenReturn(productPagination);
-    Response response = extension.target("/products").queryParam("pageNumber", "1").request().get();
+    Response response = extension.target("/products")
+        .queryParam("pageNumber", "1")
+        .queryParam("cakes", "Cakes").request().get();
+
+    assertThat(response.getStatus()).isEqualTo(statusCode);
+  }
+
+  @Test
+  void testPages() {
+    final Pagination<ProductEntity> mockPagination = productDaoRepository
+        .paginator(filter, pageTemplate);
+    Mockito.when(mockPagination).thenReturn(productPagination);
+    Response response = extension.target("/products/pages")
+        .queryParam("pageNumber", "1")
+        .queryParam("cakes", "Cakes").request().get();
 
     assertThat(response.getStatus()).isEqualTo(statusCode);
   }

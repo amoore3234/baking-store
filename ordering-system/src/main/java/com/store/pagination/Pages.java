@@ -1,5 +1,6 @@
 package com.store.pagination;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Objects;
 
 /**
@@ -7,9 +8,16 @@ import java.util.Objects;
  */
 public class Pages {
 
+  @JsonProperty
   private int firstPage;
+
+  @JsonProperty
   private int lastPage;
+
+  @JsonProperty
   private int nextPage;
+
+  @JsonProperty
   private int prevPage;
 
   public Pages() {}

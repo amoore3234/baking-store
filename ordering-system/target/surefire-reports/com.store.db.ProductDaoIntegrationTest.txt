@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.db.ProductDaoIntegrationTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.655 s - in com.store.db.ProductDaoIntegrationTest
+=======
 Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.317 s - in com.store.db.ProductDaoIntegrationTest
+>>>>>>> f825efb (Checkstyle cleanup)

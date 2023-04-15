@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.store.api.ShippingAddressJsonTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in com.store.api.ShippingAddressJsonTest
+=======
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 s - in com.store.api.ShippingAddressJsonTest
+>>>>>>> f825efb (Checkstyle cleanup)

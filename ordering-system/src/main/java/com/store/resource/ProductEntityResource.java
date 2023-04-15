@@ -3,7 +3,9 @@ package com.store.resource;
 import com.store.core.ProductEntity;
 import com.store.db.ProductDaoRepository;
 import com.store.exception.DataNotFoundException;
+import com.store.pagination.Filter;
 import com.store.pagination.PageTemplate;
+import com.store.pagination.Pages;
 import io.dropwizard.hibernate.UnitOfWork;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -50,18 +52,61 @@ public class ProductEntityResource {
    * A Response method that paginates a list of products.
    *
    * @param pageNumber query param for page numbers.
+   * @param cakeFilter queries list based on Cake type.
+   * @param toolFilter queries list based on Tool type.
+   * @param topperFilter queries list based on Topper type.
    * @return a Response that returns a paginated list.
    */
   @GET
   @UnitOfWork
-  public Response pagination(@QueryParam("pageNumber") int pageNumber) {
+  public Response pagination(@QueryParam("pageNumber") int pageNumber,
+      @QueryParam("cakes") String cakeFilter, @QueryParam("tools") String toolFilter,
+      @QueryParam("toppers") String topperFilter) {
     final PageTemplate pageTemplate = new PageTemplate();
+    final Filter newFilter = new Filter();
+    newFilter.setCakeFilter(cakeFilter);
+    newFilter.setToolFilter(toolFilter);
+    newFilter.setTopperFilter(topperFilter);
     pageTemplate.setPageNumber(pageNumber);
     pageTemplate.setPageSize(2);
+    final List<ProductEntity> paginatedList =
+        productDaoRepository.paginator(newFilter, pageTemplate).getList();
 
-    final List<ProductEntity> paginate = productDaoRepository.pagination(pageTemplate).getList();
     return Response
-          .ok(paginate)
+          .ok(paginatedList)
+          .build();
+  }
+
+  /**
+   * A Response method that generates pages from a filtered list.
+   *
+   * @param pageNumber query param for page numbers.
+   * @param cakeFilter queries list based on Cake type.
+   * @param toolFilter queries list based on Tool type.
+   * @param topperFilter queries list based on Topper type.
+   * @return a Response that returns pages.
+   */
+  @GET
+  @UnitOfWork
+  @Path("pages")
+  public Response getPages(@QueryParam("pageNumber") int pageNumber,
+      @QueryParam("cakes") String cakeFilter, @QueryParam("tools") String toolFilter,
+      @QueryParam("toppers") String topperFilter) {
+    if (pageNumber <= 0) {
+      throw new DataNotFoundException("Please enter a valid page number");
+    }
+    final PageTemplate pageTemplate = new PageTemplate();
+    final Filter newFilter = new Filter();
+    newFilter.setCakeFilter(cakeFilter);
+    newFilter.setToolFilter(toolFilter);
+    newFilter.setTopperFilter(topperFilter);
+    pageTemplate.setPageNumber(pageNumber);
+    pageTemplate.setPageSize(2);
+    final Pages pages =
+        productDaoRepository.paginator(newFilter, pageTemplate).getPages();
+
+    return Response
+          .ok(pages)
           .build();
   }
 
