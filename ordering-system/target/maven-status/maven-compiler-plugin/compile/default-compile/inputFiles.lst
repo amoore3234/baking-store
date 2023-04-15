@@ -13,6 +13,7 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/exception/DataNotFoundExceptionMapper.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/AbstractDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/health/AppHealthCheck.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/util/PaginationAndFilterUtil.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/OrderDetailEntity.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/ProductDaoRepository.java
@@ -22,6 +23,7 @@
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/db/OrderDetailDaoRepository.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/CartEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/OrderDetailEntityResource.java
+/mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/pagination/Filter.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/resource/ShippingAddressEntityResource.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/pagination/PageTemplate.java
 /mnt/c/Users/moore/baking-store/ordering-system/src/main/java/com/store/core/CustomerCartEntity.java

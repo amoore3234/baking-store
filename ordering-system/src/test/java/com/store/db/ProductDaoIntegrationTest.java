@@ -3,6 +3,7 @@ package com.store.db;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.store.core.ProductEntity;
+import com.store.pagination.Filter;
 import com.store.pagination.PageTemplate;
 import com.store.pagination.Pages;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ class ProductDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
   private ProductDaoRepository productDaoRepository;
   private PageTemplate pageTemplate;
   private final int pageNumber = 1;
-  private final int pageSize = 2;
+  private final int pageSize = 8;
 
   @BeforeEach
   void setup() {
@@ -82,9 +83,9 @@ class ProductDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
   @Test
   void testPaginationPages() {
-    final int nextPage = 2;
+    final int nextPage = 1;
     final int prevPage = 1;
-    final int lastPage = 3;
+    final int lastPage = 1;
 
     final Pages pages = productDaoRepository.pagination(pageTemplate).getPages();
 
@@ -95,9 +96,41 @@ class ProductDaoIntegrationTest extends AbstractDaoRepositoryIntegrationTest {
 
   @Test
   void testPaginationList() {
+    final int size = 8;
     final List<ProductEntity> list = productDaoRepository.pagination(pageTemplate).getList();
 
-    assertThat(pageSize).isEqualTo(list.size());
+    assertThat(size).isEqualTo(list.size());
+  }
+
+  @Test
+  void testPaginationAndFilter() {
+    Filter filter = new Filter();
+    filter.setCakeFilter("Cakes");
+    filter.setToolFilter("Tools");
+    final int size = 6;
+
+    final List<ProductEntity> filteredList = productDaoRepository
+        .paginator(filter, pageTemplate).getList();
+
+    assertThat(size).isEqualTo(filteredList.size());
+  }
+
+  @Test
+  void testFilteredPages() {
+    Filter filter = new Filter();
+    filter.setCakeFilter("Cakes");
+    filter.setToolFilter("Tools");
+    pageTemplate.setPageSize(2);
+    final int firstPage = 1;
+    final int nextPage = 2;
+    final int prevPage = 1;
+    final int lastPage = 3;
+
+    final Pages filteredPages = productDaoRepository.paginator(filter, pageTemplate).getPages();
+    assertThat(filteredPages.getFirstPage()).isEqualTo(firstPage);
+    assertThat(filteredPages.getNextPage()).isEqualTo(nextPage);
+    assertThat(filteredPages.getPrevPage()).isEqualTo(prevPage);
+    assertThat(filteredPages.getLastPage()).isEqualTo(lastPage);
   }
 
   private long newProduct() {
